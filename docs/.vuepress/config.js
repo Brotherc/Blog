@@ -78,7 +78,8 @@ module.exports = {
                     {title: "Oracle", path: '/blog/document/database/Oracle'},
                     {title: "Oracle-monitorSql", path: '/blog/document/database/Oracle_monitor_sql'},
                     {title: "MySQL-主从复制与读写分离", path: '/blog/document/database/mysql-Master-slave-replication-read-write-separation'},
-                    {title: "MySQL-性能优化", path: '/blog/document/database/mysql-performance-optimization'}
+                    {title: "MySQL-性能优化", path: '/blog/document/database/mysql-performance-optimization'},
+                    {title: "MySQL-卸载", path: '/blog/document/database/mysql-uninstall'}
                 ]
             }, {
                 title: 'ORM',
