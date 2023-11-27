@@ -240,10 +240,10 @@ module.exports = {
                 ]
             }, {
                 title: '蓝牙',
-                path: '/blog/document/bluetooth/ble_android',
+                path: '/blog/document/bluetooth/ble_android/ble_android',
                 collapsable: true,
                 children: [
-                    {title: "ble安卓开发", path: '/blog/document/bluetooth/ble_android'}
+                    {title: "ble安卓开发", path: '/blog/document/bluetooth/ble_android/ble_android'}
                 ]
             }, {
                 title: '慕课',
