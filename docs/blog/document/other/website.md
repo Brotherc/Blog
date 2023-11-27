@@ -29,6 +29,11 @@ tags:
 - C站  
 [https://civitai.com/](https://civitai.com/)  
 
+## AI
+- AI网址导航  
+[https://17yongai.com/](https://17yongai.com/)  
+[https://www.aiyjs.com/](https://www.aiyjs.com/)  
+
 ## 其它
 - 新极品自动发卡平台(3天百度云会员)  
 [http://xinjipin.com/](http://xinjipin.com/)  
@@ -38,3 +43,4 @@ tags:
 [https://www.iizhi.cn/](https://www.iizhi.cn/)  
 - 接码平台  
 [https://sms-activate.org/](https://sms-activate.org/)  
+
