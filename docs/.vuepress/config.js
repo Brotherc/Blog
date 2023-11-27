@@ -239,6 +239,13 @@ module.exports = {
                     {title: "CPU高", path: '/blog/document/prod/cpu_hight_issue'}
                 ]
             }, {
+                title: '蓝牙',
+                path: '/blog/document/bluetooth/ble_android',
+                collapsable: true,
+                children: [
+                    {title: "ble安卓开发", path: '/blog/document/bluetooth/ble_android'}
+                ]
+            }, {
                 title: '慕课',
                 path: '/blog/document/mooc/Concurrent-programming-with-high-concurrency-solution-1',
                 collapsable: true,
