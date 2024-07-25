@@ -165,8 +165,9 @@ module.exports = {
                 path: '/blog/document/latency_fault_tolerance/hystrix1',
                 collapsable: true,
                 children: [
-                    {title: "Hystrix", path: '/blog/document/latency_fault_tolerance/hystrix1'},
-                    {title: "Hystrix-基于hystrix的高可用缓存服务架构", path: '/blog/document/latency_fault_tolerance/hystrix2'}
+                    {title: "限流-Guava", path: '/blog/document/latency_fault_tolerance/Google-xianliu-Guava'},
+                    {title: "熔断-Hystrix", path: '/blog/document/latency_fault_tolerance/hystrix1'},
+                    {title: "熔断-基于hystrix的高可用缓存服务架构", path: '/blog/document/latency_fault_tolerance/hystrix2'}
                 ]
             }, {
                 title: '链路追踪',

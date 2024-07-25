@@ -1,9 +1,8 @@
 ---
-title: 公开课-Google平滑限流方案-Guava
+title: 限流-Guava
 tags:
-  - 云析学院公开课
+  - 限流
 ---
--  **大厂面试题，说说你知道的限流方案**
 
 -  **限流场景**
 
@@ -11,31 +10,42 @@ tags:
 双十一（11.11零点，由于各种商家的促销活动(前XX名免单)，支付宝进入排队支付状态）
 外卖业务
 
--  **常见的限流方案**
-
-![](./assets/yunxi/guava-xianliu/1.jpg)
-![](./assets/yunxi/guava-xianliu/2.jpg)
-![](./assets/yunxi/guava-xianliu/3.jpg)
-![](./assets/yunxi/guava-xianliu/4.jpg)
-![](./assets/yunxi/guava-xianliu/5.jpg)
-![](./assets/yunxi/guava-xianliu/6.jpg)
-![](./assets/yunxi/guava-xianliu/7.jpg)
-![](./assets/yunxi/guava-xianliu/8.jpg)
+-  **常见的限流方案**  
+手动实现负载均衡
+![](./assets/guava-xianliu/1.jpg)
+验证码
+![](./assets/guava-xianliu/2.jpg)
+容器限流
+![](./assets/guava-xianliu/3.jpg)
+限流总资源数
+![](./assets/guava-xianliu/4.jpg)
+限流某个接口的总并发/请求数
+![](./assets/guava-xianliu/5.jpg)
+Nginx限流
+![](./assets/guava-xianliu/6.jpg)
+消息队列
+![](./assets/guava-xianliu/7.jpg)
+利用Netflix的Hystrix限流
+![](./assets/guava-xianliu/8.jpg)
 
 ##  Guava是什么
-![](./assets/yunxi/guava-xianliu/9.jpg)
-![](./assets/yunxi/guava-xianliu/10.jpg)
+![](./assets/guava-xianliu/9.jpg)
+限流的概念
+![](./assets/guava-xianliu/10.jpg)
 
 ##  Guava限流核心算法
-![](./assets/yunxi/guava-xianliu/11.jpg)
-![](./assets/yunxi/guava-xianliu/12.jpg)
-![](./assets/yunxi/guava-xianliu/13.jpg)
-![](./assets/yunxi/guava-xianliu/14.jpg)
-![](./assets/yunxi/guava-xianliu/15.jpg)
-![](./assets/yunxi/guava-xianliu/16.jpg)
+漏桶算法
+![](./assets/guava-xianliu/12.jpg)
+![](./assets/guava-xianliu/13.jpg)
+令牌桶算法
+![](./assets/guava-xianliu/14.jpg)
+![](./assets/guava-xianliu/15.jpg)
+比较
+![](./assets/guava-xianliu/16.jpg)
 
 ##  Guava限流实战
-![](./assets/yunxi/guava-xianliu/20.jpg)
+Guava RateLimiter实现平滑限流
+![](./assets/guava-xianliu/20.jpg)
 -  **平滑突发限流**
 
 ```java
@@ -60,7 +70,7 @@ public class SmoothBurstyRateLimitTest01 {
     }
 }
 ```
-![](./assets/yunxi/guava-xianliu/17.jpg)
+![](./assets/guava-xianliu/17.jpg)
 ```java
 import com.google.common.util.concurrent.RateLimiter;
 
@@ -85,7 +95,7 @@ public class SmoothBurstyRateLimitTest02 {
     }
 }
 ```
-![](./assets/yunxi/guava-xianliu/18.jpg)
+![](./assets/guava-xianliu/18.jpg)
 ```java
 import com.google.common.util.concurrent.RateLimiter;
 
@@ -110,7 +120,7 @@ public class SmoothBurstyRateLimitTest03 {
     }
 }
 ```
-![](./assets/yunxi/guava-xianliu/19.jpg)
+![](./assets/guava-xianliu/19.jpg)
 
 -  **平滑预热限流**
 
@@ -136,7 +146,7 @@ public class SmoothWarmingUp {
     }
 }
 ```
-![](./assets/yunxi/guava-xianliu/21.jpg)
+![](./assets/guava-xianliu/21.jpg)
 -  **Guava用于秒杀场景**
 
 ```java
@@ -185,14 +195,14 @@ public class GuavaSecKill {
     }
 }
 ```
-![](./assets/yunxi/guava-xianliu/22.jpg)
-![](./assets/yunxi/guava-xianliu/23.jpg)
-![](./assets/yunxi/guava-xianliu/24.jpg)
+![](./assets/guava-xianliu/22.jpg)
+Guava对比其他限流方案的特点
+![](./assets/guava-xianliu/23.jpg)
 
-##  笔记
-![](./assets/yunxi/guava-xianliu/25.jpg)
-![](./assets/yunxi/guava-xianliu/26.jpg)
-![](./assets/yunxi/guava-xianliu/27.jpg)
+##  备注
+![](./assets/guava-xianliu/25.jpg)
+![](./assets/guava-xianliu/26.jpg)
+![](./assets/guava-xianliu/27.jpg)
 
 参考：
 [https://github.com/online-demo/yunxi-guava/tree/master/src/main/java/com/yunxi/demo/guava](https://github.com/online-demo/yunxi-guava/tree/master/src/main/java/com/yunxi/demo/guava)
