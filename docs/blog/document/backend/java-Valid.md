@@ -297,12 +297,3 @@ public Validator validator() {
     return validatorFactory.getValidator();
 }
 ```
-
-参考：  
-[https://mp.weixin.qq.com/s?__biz=MzU4MDUyMDQyNQ==&mid=2247487948&idx=1&sn=e0fba8b5102f8c3a468eb61146dfaf32
-&chksm=fd54c14aca23485c632857517e7003d7415819a355c34ee561baca8ca8f753003c4ac26fc4d1&mpshare=1&scene=1
-&srcid=09028Sm6DHjZeN6Ttn6haSen&sharer_sharetime=1599022366463&sharer_shareid=64d8f781e069c3f4887b3b02ae3db4f0
-&key=af1bfbb7845d3a49b00190c134b9e9fb06fecf171cefc8450cafdde7d3f0714804a182f3c7009b0fdcd429eaa4bde709750d44d6574759d9933ba2e91219ff86f25ee3786336f1f50897b574bf86234b7043696aea597696de72098aad2b0d673cf5c7a523ce9e4df70bdcc391f49af395dec6200942314c4e7b427cbdad1d47
-&ascene=1&uin=MTAzMDE1OTU4MA%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=en&exportkey=AXweKKF%2B6axVWd6DtbhKU%2Bc%3D&pass_ticket=brm2eVjlyEVnz8Dzb3gF0bjJWPSqa%2Fa6tqcwlForUC9Ub8OTz%2BFYdyr7%2Bo06cBFP&wx_header=0]
-(https://mp.weixin.qq.com/s?__biz=MzU4MDUyMDQyNQ==&mid=2247487948&idx=1&sn=e0fba8b5102f8c3a468eb61146dfaf32&chksm=fd54c14aca23485c632857517e7003d7415819a355c34ee561baca8ca8f753003c4ac26fc4d1&mpshare=1&scene=1&srcid=09028Sm6DHjZeN6Ttn6haSen&sharer_sharetime=1599022366463&sharer_shareid=64d8f781e069c3f4887b3b02ae3db4f0&key=af1bfbb7845d3a49b00190c134b9e9fb06fecf171cefc8450cafdde7d3f0714804a182f3c7009b0fdcd429eaa4bde709750d44d6574759d9933ba2e91219ff86f25ee3786336f1f50897b574bf86234b7043696aea597696de72098aad2b0d673cf5c7a523ce9e4df70bdcc391f49af395dec6200942314c4e7b427cbdad1d47&ascene=1&uin=MTAzMDE1OTU4MA%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=en&exportkey=AXweKKF%2B6axVWd6DtbhKU%2Bc%3D&pass_ticket=brm2eVjlyEVnz8Dzb3gF0bjJWPSqa%2Fa6tqcwlForUC9Ub8OTz%2BFYdyr7%2Bo06cBFP&wx_header=0)  
-

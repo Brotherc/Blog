@@ -1,7 +1,7 @@
 ---
-title: 公开课-一线互联网企业高并发场景的订单号/ID生成策略
+title: 分布式ID-生成策略
 tags:
-  - 云析学院公开课
+  - 分布式ID
 ---
 ## 分布式/集群环境ID生成要求
 - 全局唯一
@@ -54,7 +54,7 @@ private static void test() throws InterruptedException {
 - 关系型数据库都实现数据库自增ID: MySQL通过AUTO_INCREMENT实现、Oracle通过Sequence序列实现。
 - 在数据库集群环境下，不同数据库节点可设置不同起步值、相同步长来实现集群下生成全局唯一、递增ID。
 
-![](./assets/yunxi/distributed-id/1.jpg)
+![](./assets/distributed-id/1.jpg)
 
 ```sql
 SET GLOBAL auto_increment_increment=3;
@@ -66,7 +66,7 @@ SET GLOBAL auto_increment_offset=1;
 - 组成: 41位时间戳+10位机器ID+12序列号（自增），转换为长度为18的长整形。
 - Twitter为满足每秒上万条消息的创建，每条消息都必须分配全局唯一ID，这些ID需要趋势递增，方便客户端排序。
 
-![](./assets/yunxi/distributed-id/2.jpg)
+![](./assets/distributed-id/2.jpg)
 
 ```java
 /*开始时间戳（2015-01-01）*/
@@ -161,9 +161,9 @@ protected long timeGen() {
 策略四: Redis 自增ID
 - Redis实现了incr(key)API用于将key的值递增1，并返回结果。如果key不存在，则创建并赋值为0，然后再执行incr操作。
 
-![](./assets/yunxi/distributed-id/3.jpg)
-![](./assets/yunxi/distributed-id/4.jpg)
-![](./assets/yunxi/distributed-id/5.jpg)
+![](./assets/distributed-id/3.jpg)
+![](./assets/distributed-id/4.jpg)
+![](./assets/distributed-id/5.jpg)
 
 ```java
 public void nextId() {

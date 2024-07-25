@@ -90,7 +90,7 @@ module.exports = {
                     {title: "MybatisPlus", path: '/blog/document/mybatis/Mybatis-plus'}
                 ]
             }, {
-                title: 'Java第三方库',
+                title: 'Java常用类库',
                 path: '/blog/document/guava/Google-Guava-Common-operations',
                 collapsable: true,
                 children: [
@@ -138,7 +138,7 @@ module.exports = {
                 path: '/blog/document/spring/spring-Common-operations',
                 collapsable: true,
                 children: [
-                    {title: "Spring", path: '/blog/document/spring/spring-Common-operations'}
+                    {title: "Spring-常用操作", path: '/blog/document/spring/spring-Common-operations'}
                 ]
             }, {
                 title: '认证授权',
@@ -173,9 +173,18 @@ module.exports = {
                 collapsable: true,
                 path: '/blog/document/traceroute/skywalking',
                 children: [
-                    {title: "Skywalking", path: '/blog/document/traceroute/skywalking'}
+                    {title: "Skywalking-常见问题", path: '/blog/document/traceroute/skywalking'}
                 ]
-            }, {
+            },
+            {
+                title: '分布式ID',
+                path: '/blog/document/distributed_id/distributed-id',
+                collapsable: true,
+                children: [
+                    {title: "分布式ID-生成策略", path: '/blog/document/distributed_id/distributed-id'}
+                ]
+            },
+            {
                 title: '分布式事务',
                 path: '/blog/document/distributed_transaction/distributed_transaction1',
                 collapsable: true,
@@ -220,7 +229,7 @@ module.exports = {
                     {title: "Docker-安装Oracle12", path: '/blog/document/container/docker-Oracle-12c'}
                 ]
             }, {
-                title: '业务场景',
+                title: '工作实践',
                 path: '/blog/document/business/At-the-sametime-allow-only-one-client-front-end-interface-to-operate',
                 collapsable: true,
                 children: [
@@ -245,34 +254,34 @@ module.exports = {
                 children: [
                     {title: "ble安卓开发", path: '/blog/document/bluetooth/ble_android/ble_android'}
                 ]
-            }, {
-                title: '慕课',
-                path: '/blog/document/mooc/Concurrent-programming-with-high-concurrency-solution-1',
-                collapsable: true,
-                children: [
-                    {title: "并发编程与高并发解决方案-并发编程", path: '/blog/document/mooc/Concurrent-programming-with-high-concurrency-solution-1'},
-                    {title: "并发编程与高并发解决方案-高并发解决方案", path: '/blog/document/mooc/Concurrent-programming-with-high-concurrency-solution-2'}
-                ]
-            }, {
-                title: '专题',
-                path: '/blog/document/frame/NeteasePublic-Nginx',
-                collapsable: true,
-                children: [
-                    {title: "Nginx高并发实战注意事项", path: '/blog/document/frame/NeteasePublic-Nginx'},
-                    {title: "高并发架构限流技术分享", path: '/blog/document/frame/NeteasePublic-xianliu'},
-                    {title: "数据库并发压力大", path: '/blog/document/frame/NeteasePublic-db-concurrent'},
-                    {title: "SpringSession原理与坑", path: '/blog/document/frame/NeteasePublic-SpringSession'},
-                    {title: "MQ的分布式事务解决方案", path: '/blog/document/frame/NeteasePublic-transaction-mq'},
-                    {title: "微专业-高性能编程专题", path: '/blog/document/frame/NeteaseMicroProfessional-performance'},
-                    {title: "微专业-高并发中间件专题", path: '/blog/document/frame/NeteaseMicroProfessional-middleware'},
-                    {title: "微专业-分布式系统开发技术", path: '/blog/document/frame/NeteaseMicroProfessional-distributed'},
-                    {title: "微专业-双11电商网站应对千万级流量技术内幕", path: '/blog/document/frame/YunxiPublic-Double-11-Being-traffic'},
-                    {title: "Google平缓限流方案-Guava", path: '/blog/document/frame/YunxiPublic-Google-xianliu-Guava'},
-                    {title: "原生JDK线程扩展-Guava", path: '/blog/document/frame/YunxiPublic-JDK-xiancheng-Guava'},
-                    {title: "一线互联网企业高并发场景的订单号/ID生成策略", path: '/blog/document/frame/YunxiPublic-distributed-id'},
-                    {title: "超时订单自动关闭的优雅实现", path: '/blog/document/frame/YunxiPublic-order-auto-close'}
-                ]
             },
+            // {
+            //     title: '慕课',
+            //     path: '/blog/document/mooc/Concurrent-programming-with-high-concurrency-solution-1',
+            //     collapsable: true,
+            //     children: [
+            //         {title: "并发编程与高并发解决方案-并发编程", path: '/blog/document/mooc/Concurrent-programming-with-high-concurrency-solution-1'},
+            //         {title: "并发编程与高并发解决方案-高并发解决方案", path: '/blog/document/mooc/Concurrent-programming-with-high-concurrency-solution-2'}
+            //     ]
+            // }, {
+            //     title: '专题',
+            //     path: '/blog/document/frame/NeteasePublic-Nginx',
+            //     collapsable: true,
+            //     children: [
+            //         {title: "Nginx高并发实战注意事项", path: '/blog/document/frame/NeteasePublic-Nginx'},
+            //         {title: "高并发架构限流技术分享", path: '/blog/document/frame/NeteasePublic-xianliu'},
+            //         {title: "数据库并发压力大", path: '/blog/document/frame/NeteasePublic-db-concurrent'},
+            //         {title: "SpringSession原理与坑", path: '/blog/document/frame/NeteasePublic-SpringSession'},
+            //         {title: "MQ的分布式事务解决方案", path: '/blog/document/frame/NeteasePublic-transaction-mq'},
+            //         {title: "微专业-高性能编程专题", path: '/blog/document/frame/NeteaseMicroProfessional-performance'},
+            //         {title: "微专业-高并发中间件专题", path: '/blog/document/frame/NeteaseMicroProfessional-middleware'},
+            //         {title: "微专业-分布式系统开发技术", path: '/blog/document/frame/NeteaseMicroProfessional-distributed'},
+            //         {title: "微专业-双11电商网站应对千万级流量技术内幕", path: '/blog/document/frame/YunxiPublic-Double-11-Being-traffic'},
+            //         {title: "Google平缓限流方案-Guava", path: '/blog/document/frame/YunxiPublic-Google-xianliu-Guava'},
+            //         {title: "原生JDK线程扩展-Guava", path: '/blog/document/frame/YunxiPublic-JDK-xiancheng-Guava'},
+            //         {title: "超时订单自动关闭的优雅实现", path: '/blog/document/frame/YunxiPublic-order-auto-close'}
+            //     ]
+            // },
             {
                 title: "编辑器",
                 path: '/blog/document/editor/idea/idea-setting',

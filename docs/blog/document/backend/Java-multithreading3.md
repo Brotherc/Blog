@@ -4,13 +4,13 @@ tags:
   - Java基础
 ---
 
-### java并发包介绍
+## java并发包介绍
 ```java
 JDK5.0 以后的版本都引入了高级并发特性，大多数的特性在java.util.concurrent 包中，是专门用于多线程发编程的，充分利用了现代多处理器和多核心系统的功能以编写大规模并发应用程序。
 主要包含原子量、并发集合、同步器、可重入锁，并对线程池的构造提供了强力的支持。
 ```
 
-#### 线程池
+### 线程池
 1、Single Thread Executor : 只有一个线程的线程池，因此所有提交的任务是顺序执行，
 Executors.newSingleThreadExecutor()
 
@@ -235,12 +235,12 @@ public class TestPool {
 }
 ```
 
-#### 同步容器类
+### 同步容器类
 同步类容器都是线程安全的,但在某些场景下可能需要加锁来保护复合操作,复合类操作如选代(反复访问元素,遍历完容器中所有的元素)、跳转(根据指定的顺序找到当前元素的下一个元素)、以及条件运算,这些复合操作在多线程并发地修改容器时,可能会表现出意外的行为,最经典的便是ConcurrengModificationException,原因是当容器迭代的过程中,被井发的修改了内容,
 这是由于早期达代器设计的时候并没有考虑并发修改的问题。
 同步类容器:如古老的Vector, Hash Table.这些容器的同步功能其实是在JDK的Collections.synchronized**等工厂方法去创建实现的,其底层的机制无非就是用传统的synchronized关键字对每个公用的方法都进行同步,使得每次只能有一个线程访问容器的状态,这很明显不满足我们今天互联网时代高并发的需求,在保证线程安全的同时,他必续要有足够好的性能
 
-#### 并发类容器
+### 并发类容器
 jak5.0以后提供了多种并发类容器来替代同步类容器从而改善性能.同步类容器的状态都是串行化的,他们虽然实现了线程安全,但是严重降低了并发性,在多线程环境时,严重降低了应用程序的吞吐量。
 并发类容器是专门针对并发设计的,使用ConcurrentHashMap来代替给子散列的传统的HashTable,而且在ConcurrentHashMap中,添加了一些常见复合操作的支持,以及使用了CopyOnWriteArrayList代替Voctor,并发的CopyonWriteArraySet,以及并发的Queue, ConcurrentLinkedQueue和LinkedBlockingQueue,前者是高性能的队列,后者是以阻塞形式的队列,具体实现Queue还有很多,例如ArrayBlockingQueue.
 PriorityBlockingQueue. Synchronous Queue等
@@ -259,7 +259,7 @@ JDK里的CoW容器有两种: CopyOnWriteArrayList和CopyOnWriteArraySet,Cow容�
 CopyOnWrite容器即写时复制的容器,通俗的理解是当我们往一个容器添加元素的时候,不直接往当前容器添加,而是先将当前容器进行Copy,复制出一个新的容器,然后新的容器里添加元素,添加完元素之后,再将原容器的引用指向新的容器。这样放的好处是我们可以对CopyOnWrite容器进行并发的读,而不需要加锁,因为当前容器不会添加任何元素,所以CopyOnWrite容器也是一种读写分离的思想,读和写不同
 的容器。
 
-#### 并发Queue
+### 并发Queue
 在并发队列上JDK提供了两套实现,一个是以ConcurrentLinkedQueue为代表的高性能队列,一个是以BlockingQueue接口为代表的阻塞队列,无论哪种都维承自Queue
 ![](./assets/java/queue.png)
 
@@ -574,7 +574,7 @@ LinkedBlockingQueue和ArrayBlockingQueue区别：
 LinkedBlockingQueue和ArrayBlockingQueue比较起来,它们背后所用的数据结构不一样,导致LinkedBlockingQueue的数据吞吐量要大于ArrayBlockingQueue,但在线程数量很大时其性能的可预见性低于ArrayBlockingQueue.
 ```
 
-### java并发编程的一些总结
+## java并发编程的一些总结
 1.不应用线程池的缺点
 有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(...).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患：
 新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象
@@ -602,9 +602,9 @@ SecheduledThreadPool：周期性线程池。支持执行周期性线程任务
 调用者与线程的依赖性。调用者得监视线程的完成情况，影响可并发量
 当然，在有些业务里确实需要一定的依赖性，比如调用者需要得到线程完成后结果，传统的Thread是不便完成的，因为run方法无返回值，只能通过一些共享的变量来传递结果，但在Executor框架里可以通过Future和Callable实现需要有返回值的任务，当然线程的异步性导致需要有相应机制来保证调用者能等待任务完成。
 
-### 多线程的设计模式
+## 多线程的设计模式
 并行设计模式属于设计优化的一部分,它是对一些常用的多线程结构的总结和抽象与串行程序相比,并行程序的结构通常更为复杂。因此合理的使用并行模式在多线程开发中更具有意义,在这里主要介绍Future, Master-Worker和生产者-消费者模型。
-#### Future模式
+### Future模式
 Future模式有点类似于商品订单。比如在网购时,当看重某一件商品事,就可以提交订 ,当订单处理完成后,在家里等待商品送货上门即可。或者说更形象的我们发送Ajax请求的时候,页面是异步的进行后台处理,用户无须一直等待请求的结果,可以继续浏览或操作其他内容。
 ![](./assets/java/Future.png)
 
@@ -711,7 +711,7 @@ public class Main {
 }
 ```
 
-#### Master-Worker模式
+### Master-Worker模式
 Master-Worker模式是常用的并行计算模式。
 它的核心思想是系统由两类进程协作工作: Master进程和Worker进程。Master负责接收和分配任务,Worker负责处理子任务。当各个Worker子进程处理完成后,会将结果返回给Master, 由Master做归纳和总结。
 其好处是能将一个大任务分解成若干个小任务,并行执行,从而提高系统的吞吐量。
@@ -873,7 +873,7 @@ public class Main {
 }
 ```
 
-#### 生产者-消费者
+### 生产者-消费者
 生产者和消费者也是一个非常经典的多线程模式,我们在实际开发中应用非常广泛的思想理念。在生产-消费模式中:通常由两类线程,即若干个生产者的线程和若干个消费者的线程。生产者线程负责提交用户请求,消费者线程则负责具体处理生产者提交的任务,在生产者和消费者之间通过共享内存缓存区进行通信。
 Data:
 ```java
@@ -1038,7 +1038,7 @@ public class Main {
 }
 ```
 
-#### Executor框架
+### Executor框架
 为了更好的控制多线程, JDK提供了一套线程框架Executor,帮助开发人员有效地进行线程控制。它们都在java.util.concurrent包中,是JDK并发包的核心。其中有一个比较重要的类: Executors,他扮演这线程工厂的角色,我们通过Executors可以创建特定功能的线程池。
 Executors创建线程池方法:
 newFixedThreadPool)方法,该方法返回一个固定数量的线程池,该方法的线程数始终不变,当有一个任务提交时,若线程池中空闲,则立即执行,若没有,则会被暂缓在一个任务队列中等待有空闲的线程去执行。
@@ -1046,7 +1046,7 @@ newSingleThreadExecutor()方法,创建一个线程的线程池,若空闲则执�
 newCachedThreadPool)方法,返回一个可根据实际情况调整线程个数的线程池,不限制最大线程数量,若有任务,则创建线程,若无任务则不创建线程。如果没有任务则线程在60s后自动回收(空闲时间60s) .
 newScheduled ThreadPool)方法,该方法返回一个SchededExecutorService对象,但该线程池可以指定线程的数量
 
-#### 自定义线程池
+### 自定义线程池
 若Executors工厂类无法满足我们的需求,可以自己去创建自定义的线程池,其实Executors工广类里面的创建线程方法其内部实现均是用了ThreadPoolExecutor这个类,这个类可以自定义线程。构造方法如下:
 ```java
 public ThreadPoolExecutor(int corePoolSize,
@@ -1062,7 +1062,7 @@ public ThreadPoolExecutor(int corePoolSize,
 当一次性来了30个任务，放到这个线程池里，肯定会有一堆任务被拒绝，首先，corePoolSize有2个，还有28个任务待处理，我们可以根据上限maximumPoolSize再去提高8个线程去处理，还剩20个，再往队列里扔10个，最后还剩10个，这10个就会去走RejectedExecutionHandler
 任务过多的时候会导致内存溢出，队列会逐渐变大。
 
-#### 自定义线程池使用详细
+### 自定义线程池使用详细
 
 这个构造方法对于队列是什么类型的比较关键:
 在使用有界队列时: 若有新的任务需要执行,如果线程池实际线程数小于corePoolSize,则优先创建线程,若大于corePoolsize,则会将任务加入队列，若队列已满，

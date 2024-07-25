@@ -103,13 +103,3 @@ Zookeeper > 缓存 > 数据库
 
 - 从可靠性角度
 Zookeeper > 缓存 > 数据库
-
-## 介绍(二)
-
-![](./assets/distributed_lock2/1.jpg)
-![](./assets/distributed_lock2/2.jpg)
-![](./assets/distributed_lock2/3.jpg)
-![](./assets/distributed_lock2/4.jpg)
-![](./assets/distributed_lock2/5.jpg)
-![](./assets/distributed_lock2/6.jpg)
-![](./assets/distributed_lock2/7.jpg)
