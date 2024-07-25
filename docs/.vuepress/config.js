@@ -238,7 +238,8 @@ module.exports = {
                     {title: "获取区号", path: '/blog/document/business/Access-to-the-area-code'},
                     {title: "调用微信JS-SDK实现拍照功能", path: '/blog/document/business/wechat_take_photos'},
                     {title: "Nginx获取真实ip和客户端端口", path: '/blog/document/business/nginx-orgin-ip-port'},
-                    {title: "Nginx代理内网上传文件到外网Sftp服务器", path: '/blog/document/business/nginx-proxy-sftp'}
+                    {title: "Nginx代理内网上传文件到外网Sftp服务器", path: '/blog/document/business/nginx-proxy-sftp'},
+                    {title: "ble安卓开发", path: '/blog/document/business/ble_android'}
                 ]
             }, {
                 title: '生产环境问题',
@@ -246,13 +247,6 @@ module.exports = {
                 collapsable: true,
                 children: [
                     {title: "CPU高", path: '/blog/document/prod/cpu_hight_issue'}
-                ]
-            }, {
-                title: '蓝牙',
-                path: '/blog/document/bluetooth/ble_android/ble_android',
-                collapsable: true,
-                children: [
-                    {title: "ble安卓开发", path: '/blog/document/bluetooth/ble_android/ble_android'}
                 ]
             },
             // {

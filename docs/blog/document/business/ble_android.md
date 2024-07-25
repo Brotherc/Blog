@@ -697,11 +697,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 ### GATT
-![](./assets/IMG_0500.png)  
-![](./assets/IMG_0501.png)  
-![](./assets/IMG_0502.png)  
-![](./assets/IMG_0503.png)  
-![](./assets/IMG_0504.png)  
-![](./assets/IMG_0505.png)  
-![](./assets/IMG_0506.png)  
-![](./assets/IMG_0507.png)  
+![](assets/ble_android/IMG_0500.png)  
+![](assets/ble_android/IMG_0501.png)  
+![](assets/ble_android/IMG_0502.png)  
+![](assets/ble_android/IMG_0503.png)  
+![](assets/ble_android/IMG_0504.png)  
+![](assets/ble_android/IMG_0505.png)  
+![](assets/ble_android/IMG_0506.png)  
+![](assets/ble_android/IMG_0507.png)  
