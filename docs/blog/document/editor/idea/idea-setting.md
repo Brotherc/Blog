@@ -43,8 +43,12 @@ settings—Editor—General—Code Completion—取消勾选Match case
 ## 自动生成serialVersionUID
 ![](./assets/1.png)
 
+## 破解
+[https://www.exception.site/essay/idea-reset-eval](https://www.exception.site/essay/idea-reset-eval)  
+[https://3.jetbra.in/](https://3.jetbra.in/)  
+
 ## 常用插件
-- Translate
+- Translate或Translation
 - SonarLint  
 参考:  
 [https://segmentfault.com/a/1190000019859084?utm_source=tag-newest](https://segmentfault.com/a/1190000019859084?utm_source=tag-newest)  
@@ -74,3 +78,16 @@ settings—Editor—General—Code Completion—取消勾选Match case
 ![](./assets/2.png)  
 参考：  
 [https://jingyan.baidu.com/article/15622f24ca2faafdfcbea58b.html](https://jingyan.baidu.com/article/15622f24ca2faafdfcbea58b.html)  
+
+## 开启easyconnect导致maven下载依赖失败及数据库连接不上
+- Maven  
+Build，Execution，Deployment-Build Tools-Maven-importing-VM options for importe-填上-Djava.net.preferIPv4Stack=true  
+Build，Execution，Deployment-Build Tools-Maven-Runner-VM Options-填上-Djava.net.preferIPv4Stack=true  
+- 数据库连接  
+Data Source-Advanced-VM Options-填上-Djava.net.preferIPv4Stack=true  
+
+## Gradle不兼容中文环境，控制台乱码
+Help-Edit Custom VM Options
+```
+-Dfile.encoding=UTF-8
+```

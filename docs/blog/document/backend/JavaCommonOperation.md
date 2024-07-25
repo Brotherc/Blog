@@ -170,6 +170,17 @@ String s = "string@#$".replaceAll("[^A-Za-z0-9]", "");
 LocalDateTime todayStart = LocalDateTime.of(LocalDate.now(), LocalTime.MIN);//当天开始
 LocalDateTime todayEnd = LocalDateTime.of(LocalDate.now(), LocalTime.MAX);//当天结束
 ```
+参考：  
+[https://www.baeldung.com/java-day-start-end](https://www.baeldung.com/java-day-start-end)    
+
+### 获取当年的开始时间和结束时间
+```java
+Date startDate = Date.from(LocalDate.now().with(TemporalAdjusters.firstDayOfYear()).atStartOfDay(ZoneId.systemDefault()).toInstant());
+Date endDate = Date.from(LocalDate.now().with(TemporalAdjusters.lastDayOfYear()).atTime(LocalTime.MAX).atZone(ZoneId.systemDefault()).toInstant());
+```
+参考：  
+[https://www.baeldung.com/java-date-year-start-end](https://www.baeldung.com/java-date-year-start-end)  
+[http://www.java2s.com/example/java/java.time/get-first-date-of-current-year.html](http://www.java2s.com/example/java/java.time/get-first-date-of-current-year.html)  
 
 ### 获取当前时间到第二天的时间差
 ```java

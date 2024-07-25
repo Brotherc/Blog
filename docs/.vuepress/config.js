@@ -287,8 +287,13 @@ module.exports = {
                 children: [
                     {title: "Chrome", path: '/blog/document/browser/Chrome'}
                 ]
-            },
-            {
+            }, {
+                title: 'AI',
+                collapsable: true,
+                children: [
+                    {title: "AI", path: '/blog/document/ai/ai'}
+                ]
+            }, {
                 title: '其它',
                 collapsable: true,
                 path: '/blog/document/other/website',
