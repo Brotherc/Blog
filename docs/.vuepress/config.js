@@ -2,12 +2,8 @@ module.exports = {
     title: 'Brotherc 博客',
     description: '博客',
     head: [ // 注入到当前页面的 HTML <head> 中的标签
-        [
-            'link', {
-            rel: 'icon',
-            href: '/logo.png'
-        }
-        ] // 增加一个自定义的 favicon(网页标签的图标)
+        ['link', {rel: 'icon', href: '/logo.png'}], // 增加一个自定义的 favicon(网页标签的图标)
+        ['img-lazy']
     ],
     markdown: {
         lineNumbers: true // 代码块显示行号
@@ -18,7 +14,49 @@ module.exports = {
         subSidebar: 'auto',
         nav: [
             {
-                text: "标签云",
+                text: '生产故障',
+                items: []
+            },
+            {
+                text: '性能优化',
+                items: []
+            },
+            {
+                text: '工作实践',
+                items: [
+                    {
+                        text: '用户中心',
+                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/ge0ykg/qysxd954rwuyffr4/collaborator/join?token=s2OnVQmy4lqmSc0J&source=doc_collaborator# 《用户中心》'
+                    },
+                    {
+                        text: '网关',
+                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/ge0ykg/kk5uz64o2epi1mkd/collaborator/join?token=HRuC4vlofDhVni7a&source=doc_collaborator# 《网关》'
+                    }
+                ]
+            },
+            {
+                text: '源码',
+                items: [
+                    {
+                        text: 'HashMap',
+                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/pwhmbd/qptxl6hs0l6x1ghu/collaborator/join?token=buJmWz3ycIKJhhPU&source=doc_collaborator# 《HashMap源码分析》'
+                    },
+                    {
+                        text: 'ConcurrentHashMap',
+                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/pwhmbd/qgf3vnnbn48tbqg8/collaborator/join?token=Hdpc3h1fyu0bkd1e&source=doc_collaborator# 《ConcurrentHashMap源码分析》'
+                    },
+                    {
+                        text: 'uid-generator',
+                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/ny45pn/gm29019sxpczru30/collaborator/join?token=R4uiW4h5rrnebj21&source=doc_collaborator# 《uid-generator源码解析》'
+                    }
+                ]
+            },
+            {
+                text: '算法',
+                items: []
+            },
+            {
+                text: "标签",
                 link: '/tag/',
                 tags: true
             },
@@ -27,7 +65,7 @@ module.exports = {
                 items: [
                     {text: 'Github', link: 'https://github.com/brotherc'}
                 ]
-            }
+            },
         ],
         sidebar: [
             {
@@ -77,7 +115,10 @@ module.exports = {
                 children: [
                     {title: "Oracle", path: '/blog/document/database/Oracle'},
                     {title: "Oracle-monitorSql", path: '/blog/document/database/Oracle_monitor_sql'},
-                    {title: "MySQL-主从复制与读写分离", path: '/blog/document/database/mysql-Master-slave-replication-read-write-separation'},
+                    {
+                        title: "MySQL-主从复制与读写分离",
+                        path: '/blog/document/database/mysql-Master-slave-replication-read-write-separation'
+                    },
                     {title: "MySQL-性能优化", path: '/blog/document/database/mysql-performance-optimization'},
                     {title: "MySQL-卸载", path: '/blog/document/database/mysql-uninstall'}
                 ]
@@ -146,11 +187,20 @@ module.exports = {
                 collapsable: true,
                 children: [
                     {title: "SpringSecurity-开始开发", path: '/blog/document/spring/SpringSecurity-start'},
-                    {title: "SpringSecurity-使用SpringMVC开发RESTfulAPI", path: '/blog/document/spring/SpringSecurity-SpringMVC-RESTful-API'},
+                    {
+                        title: "SpringSecurity-使用SpringMVC开发RESTfulAPI",
+                        path: '/blog/document/spring/SpringSecurity-SpringMVC-RESTful-API'
+                    },
                     {title: "SpringSecurity-开发基于表单的认证", path: '/blog/document/spring/SpringSecurity-form'},
                     {title: "SpringSecurity-OAuth2集成第三方登录", path: '/blog/document/spring/SpringSecurity-oauth2'},
-                    {title: "SpringSecurity-认证流程源码级详解", path: '/blog/document/spring/SpringSecurity-sourceCode'},
-                    {title: "SpringSecurity-Social开发第三方认证", path: '/blog/document/spring/SpringSocial-development-third'}
+                    {
+                        title: "SpringSecurity-认证流程源码级详解",
+                        path: '/blog/document/spring/SpringSecurity-sourceCode'
+                    },
+                    {
+                        title: "SpringSecurity-Social开发第三方认证",
+                        path: '/blog/document/spring/SpringSocial-development-third'
+                    }
                 ]
             }, {
                 title: '微服务',
@@ -167,7 +217,10 @@ module.exports = {
                 children: [
                     {title: "限流-Guava", path: '/blog/document/latency_fault_tolerance/Google-xianliu-Guava'},
                     {title: "熔断-Hystrix", path: '/blog/document/latency_fault_tolerance/hystrix1'},
-                    {title: "熔断-基于hystrix的高可用缓存服务架构", path: '/blog/document/latency_fault_tolerance/hystrix2'}
+                    {
+                        title: "熔断-基于hystrix的高可用缓存服务架构",
+                        path: '/blog/document/latency_fault_tolerance/hystrix2'
+                    }
                 ]
             }, {
                 title: '链路追踪',
@@ -190,11 +243,11 @@ module.exports = {
                 path: '/blog/document/distributed_transaction/distributed_transaction1',
                 collapsable: true,
                 children: [
-                      {title: "介绍(一)", path: '/blog/document/distributed_transaction/distributed_transaction1'},
-                      {title: "介绍(二)", path: '/blog/document/distributed_transaction/distributed_transaction2'},
-                      {title: "介绍(三)", path: '/blog/document/distributed_transaction/distributed_transaction3'},
-                      {title: "介绍(四)", path: '/blog/document/distributed_transaction/distributed_transaction4'},
-                      {title: "介绍(五)", path: '/blog/document/distributed_transaction/seata'}
+                    {title: "介绍(一)", path: '/blog/document/distributed_transaction/distributed_transaction1'},
+                    {title: "介绍(二)", path: '/blog/document/distributed_transaction/distributed_transaction2'},
+                    {title: "介绍(三)", path: '/blog/document/distributed_transaction/distributed_transaction3'},
+                    {title: "介绍(四)", path: '/blog/document/distributed_transaction/distributed_transaction4'},
+                    {title: "介绍(五)", path: '/blog/document/distributed_transaction/seata'}
                 ]
             }, {
                 title: '分布式锁',
@@ -234,7 +287,10 @@ module.exports = {
                 path: '/blog/document/business/At-the-sametime-allow-only-one-client-front-end-interface-to-operate',
                 collapsable: true,
                 children: [
-                    {title: "同一时间只允许一个客户端操作前端界面", path: '/blog/document/business/At-the-sametime-allow-only-one-client-front-end-interface-to-operate'},
+                    {
+                        title: "同一时间只允许一个客户端操作前端界面",
+                        path: '/blog/document/business/At-the-sametime-allow-only-one-client-front-end-interface-to-operate'
+                    },
                     {title: "树形结构业务模型实践", path: '/blog/document/business/Tree-structure-business-model'},
                     {title: "获取区号", path: '/blog/document/business/Access-to-the-area-code'},
                     {title: "调用微信JS-SDK实现拍照功能", path: '/blog/document/business/wechat_take_photos'},
