@@ -15,12 +15,17 @@ module.exports = {
         nav: [
             {
                 text: '生产故障',
-                items: []
+                items: [
+                    {
+                        text: 'RabbitMQ顺序性问题',
+                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/ny45pn/grihv06a0bccmt8w/collaborator/join?token=ca8hawZrCa89W9RU&source=doc_collaborator# 《RabbitMQ消息顺序不一致问题》'
+                    },
+                ]
             },
-            {
+/*            {
                 text: '性能优化',
                 items: []
-            },
+            },*/
             {
                 text: '工作实践',
                 items: [
@@ -51,10 +56,10 @@ module.exports = {
                     }
                 ]
             },
-            {
-                text: '算法',
-                items: []
-            },
+            // {
+            //     text: '算法',
+            //     items: []
+            // },
             {
                 text: "标签",
                 link: '/tag/',
