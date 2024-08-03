@@ -41,18 +41,18 @@ module.exports = {
             },
             {
                 text: '源码',
-                items: [
-                    {
+                items: [{
                         text: 'HashMap',
                         link: 'https://www.yuque.com/g/liuchunsheng-eihay/pwhmbd/qptxl6hs0l6x1ghu/collaborator/join?token=buJmWz3ycIKJhhPU&source=doc_collaborator# 《HashMap源码分析》'
-                    },
-                    {
+                    },{
                         text: 'ConcurrentHashMap',
                         link: 'https://www.yuque.com/g/liuchunsheng-eihay/pwhmbd/qgf3vnnbn48tbqg8/collaborator/join?token=Hdpc3h1fyu0bkd1e&source=doc_collaborator# 《ConcurrentHashMap源码分析》'
-                    },
-                    {
+                    },{
                         text: 'uid-generator',
                         link: 'https://www.yuque.com/g/liuchunsheng-eihay/ny45pn/gm29019sxpczru30/collaborator/join?token=R4uiW4h5rrnebj21&source=doc_collaborator# 《uid-generator源码解析》'
+                    },{
+                        text: 'Redis',
+                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/pwhmbd/rgco8qn9vwk0fkau/collaborator/join?token=QIugt3XrKoqUxlll&source=doc_collaborator# 《Redis源码解析》'
                     }
                 ]
             },
