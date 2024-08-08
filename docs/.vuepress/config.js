@@ -53,6 +53,9 @@ module.exports = {
                     },{
                         text: 'Redis',
                         link: 'https://www.yuque.com/g/liuchunsheng-eihay/pwhmbd/rgco8qn9vwk0fkau/collaborator/join?token=QIugt3XrKoqUxlll&source=doc_collaborator# 《Redis源码解析》'
+                    },{
+                        text: 'Kafka',
+                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/pwhmbd/nlp9ao45cy8c17rw/collaborator/join?token=1p0mSqlitUOEcEDJ&source=doc_collaborator# 《Kafka源码解析》'
                     }
                 ]
             },
