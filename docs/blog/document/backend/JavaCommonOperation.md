@@ -249,3 +249,9 @@ public class Main {
     }
 }
 ```
+
+### maven-antrun-plugin和surefire运行测试报告
+```shell
+mvn clean package surefire-report:report -Dtest=类名
+mvn clean package surefire-report:report -Dtest=类名#方法名,类名#方法名
+```
