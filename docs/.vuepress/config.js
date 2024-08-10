@@ -18,7 +18,7 @@ module.exports = {
                 items: [
                     {
                         text: 'RabbitMQ顺序性问题',
-                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/ny45pn/grihv06a0bccmt8w/collaborator/join?token=ca8hawZrCa89W9RU&source=doc_collaborator# 《RabbitMQ消息顺序不一致问题》'
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/ny45pn/grihv06a0bccmt8w?singleDoc# 《RabbitMQ消息顺序不一致问题》'
                     },
                 ]
             },
@@ -31,11 +31,11 @@ module.exports = {
                 items: [
                     {
                         text: '用户中心',
-                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/ge0ykg/qysxd954rwuyffr4/collaborator/join?token=s2OnVQmy4lqmSc0J&source=doc_collaborator# 《用户中心》'
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/ge0ykg/qysxd954rwuyffr4?singleDoc# 《用户中心》'
                     },
                     {
                         text: '网关',
-                        link: 'https://www.yuque.com/g/liuchunsheng-eihay/ge0ykg/kk5uz64o2epi1mkd/collaborator/join?token=HRuC4vlofDhVni7a&source=doc_collaborator# 《网关》'
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/ge0ykg/kk5uz64o2epi1mkd?singleDoc# 《网关》'
                     }
                 ]
             },
