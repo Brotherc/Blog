@@ -22,10 +22,13 @@ module.exports = {
                     },
                 ]
             },
-/*            {
-                text: '性能优化',
-                items: []
-            },*/
+            {
+                text: '扩展',
+                items: [{
+                        text: 'WebFlux',
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/pwhmbd/xrhrtb8azs9pb2s3?singleDoc# 《WebFlux》'
+                }]
+            },
             {
                 text: '工作实践',
                 items: [
