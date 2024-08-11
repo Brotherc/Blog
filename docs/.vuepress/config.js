@@ -56,6 +56,12 @@ module.exports = {
                     },{
                         text: 'Kafka',
                         link: 'https://www.yuque.com/liuchunsheng-eihay/pwhmbd/nlp9ao45cy8c17rw?singleDoc# 《Kafka源码解析》'
+                    },{
+                        text: 'SpringCloudGateway',
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/pwhmbd/eon0t76ccalxra83?singleDoc# 《SpringCloudGateway源码解析》'
+                    },{
+                        text: '源码优秀设计思想',
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/pwhmbd/tocaf5vsklvhs7xe?singleDoc# 《源码优秀设计思想》'
                     }
                 ]
             },
