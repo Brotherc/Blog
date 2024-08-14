@@ -14,12 +14,20 @@ module.exports = {
         subSidebar: 'auto',
         nav: [
             {
-                text: '生产故障',
+                text: '问题&生产故障',
                 items: [
                     {
                         text: 'RabbitMQ顺序性问题',
                         link: 'https://www.yuque.com/liuchunsheng-eihay/ny45pn/grihv06a0bccmt8w?singleDoc# 《RabbitMQ消息顺序不一致问题》'
                     },
+                    {
+                        text: 'SpringBoot&Cloud升级导致Stream消息消费问题',
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/ny45pn/gdufqukgslri2kxq?singleDoc# 《SpringBoot&Cloud升级导致Stream消息消费问题》'
+                    },
+                    {
+                        text: 'JPA引发的内存泄漏问题',
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/ny45pn/ydl9sihwcrpl6m7g?singleDoc# 《JPA引发的内存泄漏问题》'
+                    }
                 ]
             },
             {
