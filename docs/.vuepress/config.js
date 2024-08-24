@@ -51,6 +51,13 @@ module.exports = {
                 ]
             },
             {
+                text: '知识总结',
+                items: [{
+                    text: 'JVM',
+                    link: 'https://www.zhixi.com/view/683f4602'
+                }]
+            },
+            {
                 text: '源码',
                 items: [{
                         text: 'HashMap',
