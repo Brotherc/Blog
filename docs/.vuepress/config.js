@@ -60,6 +60,9 @@ module.exports = {
             {
                 text: '源码',
                 items: [{
+                        text: 'ThreadPoolExecutor',
+                        link: 'https://www.yuque.com/liuchunsheng-eihay/pwhmbd/zulc92xxxozlnmat?singleDoc# 《ThreadPoolExecutor源码解析》'
+                    },{
                         text: 'HashMap',
                         link: 'https://www.yuque.com/liuchunsheng-eihay/pwhmbd/qptxl6hs0l6x1ghu?singleDoc# 《HashMap源码分析》'
                     },{
