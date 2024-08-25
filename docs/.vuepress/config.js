@@ -55,6 +55,9 @@ module.exports = {
                 items: [{
                     text: 'JVM',
                     link: 'https://www.zhixi.com/view/683f4602'
+                },{
+                    text: '并发编程',
+                    link: 'https://www.zhixi.com/view/71e7473d'
                 }]
             },
             {
