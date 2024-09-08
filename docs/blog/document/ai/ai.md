@@ -58,6 +58,8 @@ tags:
 [https://yige.baidu.com/](https://yige.baidu.com/)  
 - 把素描变成一幅画  
 [https://scribblediffusion.com/](https://scribblediffusion.com/)  
+- AI绘画
+[https://www.recraft.ai/](https://www.recraft.ai/)  
 
 ## 作诗
 - 诗三百  

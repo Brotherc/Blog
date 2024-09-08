@@ -7,10 +7,16 @@ tags:
 ## 数据结构
 - 在线动画模拟使用
 [https://www.cs.usfca.edu/~galles/visualization/Heap.html](https://www.cs.usfca.edu/~galles/visualization/Heap.html)  
+- 代码结构分析神奇
+[https://github.com/CoatiSoftware/Sourcetrail](https://github.com/CoatiSoftware/Sourcetrail)  
 
 ## 工具
 - 在线JSON转Excel  
 [https://wejson.cn/json2excel/](https://wejson.cn/json2excel/)  
+- 在线pdf工具
+[https://tools.pdf24.org/](https://tools.pdf24.org/)  
+- IT工具箱
+[https://it-tools.tech/](https://it-tools.tech/)  
 
 ## 网络
 [https://www.wireshark.org](https://www.wireshark.org)  
@@ -33,6 +39,8 @@ tags:
 - Maven  
 [https://search.maven.org/](https://search.maven.org/)  
 [https://central.sonatype.com/](https://central.sonatype.com/)  
+- 文字banner生成利器
+[http://patorjk.com/software/taag](http://patorjk.com/software/taag)
 
 ## X站
 - C站  
@@ -65,6 +73,7 @@ tags:
 [https://pdai.tech/](https://pdai.tech/)  
 [https://topjavaer.cn](https://topjavaer.cn)  
 [https://github.com/Tyson0314/Java-learning](https://github.com/Tyson0314/Java-learning)  
+[https://nageoffer.com/onecoupon/](https://nageoffer.com/onecoupon/)  
 
 ## IT
 搜索一些问题可以找到靠谱的答案,有不少全球的技术大牛和大家交流。  
@@ -76,4 +85,5 @@ tags:
 [http://www.wired.com](http://www.wired.com)  
 [http://tech.firstpost.com/](http://tech.firstpost.com/)  
 [https://techcrunch.com](https://techcrunch.com)  
-
+编程类中文书籍  
+[https://github.com/justjavac/free-programming-books-zh_CN](https://github.com/justjavac/free-programming-books-zh_CN)
