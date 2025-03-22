@@ -7,8 +7,10 @@ tags:
 ## 申请API Key
 详情见:[https://developers.google.cn/maps/documentation/javascript/get-api-key](https://developers.google.cn/maps/documentation/javascript/get-api-key)  
 
+<br>
+
 ## 原生Demo实现
-googleMap.html
+**googleMap.html**
 ```html
 <!DOCTYPE html>
 <html>
@@ -44,9 +46,9 @@ googleMap.html
 </html>
 ```
 
-## Vue实现
+<br>
 
-### Typescript版本集成
+## Vue实现
 
 **1. 安装依赖**
 
@@ -115,22 +117,24 @@ package.json
   "scripts": {
     "serve": "quasar dev -m ssr" // 将ssr修改为spa
     // ...
-  },
+  }
 }
 ```
 quasar.conf.js
 ```js
 module.exports = function () {
   return {
-    ...
+    // ...
     preFetch: true // 修改为false
   }
 }
 ```
 详情见：[https://github.com/xkjyeah/vue-google-maps/issues/493](https://github.com/xkjyeah/vue-google-maps/issues/493)  
 
+<br>
+
 ## 服务端渲染实现
-**1.googleMap.ts**
+**1. googleMap.ts**
 
 ```typescript
 // ...
@@ -197,21 +201,23 @@ declare let google: any;
 ```
 详情见：[https://stackoverflow.com/questions/50054386/using-the-object-from-external-javascript-file-inside-typescript](https://stackoverflow.com/questions/50054386/using-the-object-from-external-javascript-file-inside-typescript)  
 
-**2.googleMap.html**
+**2. googleMap.html**
 
 ```html
 <div id="map" style="height: 600px; width: 1000px;"></div>
 ```
 
+<br>
+
 ## 其它问题
-**1.出现此页面无法正确加载Google地图。的弹窗**
+**1. 出现此页面无法正确加载Google地图。的弹窗**  
 在Google云平台的[应用限制]里我们对密钥使用进行限制，只允许特定的地址使用密钥，这样可以防止我们的配额泄露或被窃取。  
 
 
-**2.出现For development purposes only的覆盖层**
+**2. 出现For development purposes only的覆盖层**  
 正常使用API Key需要开通结算账户。在Google云平台的[导航菜单]-[结算]中关联结算账户，注意需要信用卡验证身份，支持VISA、运通、JCB、MasterCard，暂不支持银联。 验证身份时会先扣除一美元，验证成功后会返还。  
 
-
+<br>
 
 ## 文档&资料
 
