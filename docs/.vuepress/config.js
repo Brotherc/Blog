@@ -123,22 +123,12 @@ module.exports = {
                 ]
             }, {
                 title: '后端',
-                path: '/blog/document/backend/Golang',
+                path: '/blog/document/backend/Java-bit-operation',
                 collapsable: true,
                 children: [
-                    {title: "Golang", path: '/blog/document/backend/Golang'},
-                    {title: "Java-位运算", path: '/blog/document/backend/Java-bit-operation'},
-                    {title: "Java-面向对象", path: '/blog/document/backend/Java-OOP'},
-                    {title: "Java-常用类", path: '/blog/document/backend/Java-CommonlyUsedClass'},
-                    {title: "Java-集合", path: '/blog/document/backend/Java-collection'},
-                    {title: "Java-多线程(一)", path: '/blog/document/backend/Java-multithreading'},
-                    {title: "Java-多线程(二)", path: '/blog/document/backend/Java-multithreading2'},
-                    {title: "Java-多线程(三)", path: '/blog/document/backend/Java-multithreading3'},
-                    {title: "Java-jdk1.8新特性", path: '/blog/document/backend/java8'},
-                    {title: "Java-Valid", path: '/blog/document/backend/java-Valid'},
-                    {title: "Java-常用操作", path: '/blog/document/backend/JavaCommonOperation'},
-                    {title: "Java-jdbc", path: '/blog/document/backend/Java-jdbc-date-insert'},
-                    {title: "Java-regexp", path: '/blog/document/backend/Java-exp'}
+                    {title: "搞懂位运算", path: '/blog/document/backend/Java-bit-operation'},
+                    {title: "Java高频代码备忘录", path: '/blog/document/backend/JavaCodeMemo'},
+                    {title: "Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
             }, {
                 title: '数据库',

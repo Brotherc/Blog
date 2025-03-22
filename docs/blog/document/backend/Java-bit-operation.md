@@ -1,10 +1,11 @@
 ---
-title: Java-位运算
+title: 搞懂位运算
 tags:
-  - Java基础
+  - Java
+  - 位运算
 ---
 
-Demo1:
+## 案例
 ```java
 /*
 	位运算符：
@@ -67,10 +68,12 @@ class OperatorDemo {
 */
 ```
 
-Demo2:
+<br>
+
+## 异或
 ```java
 /*
-	^的特点：一个数据对另一个数据位异或两次，该数本身不变。
+* ^的特点：一个数据对另一个数据位异或两次，该数本身不变。
 */
 class OperatorDemo2 {
 	public static void main(String[] args) {
@@ -83,7 +86,9 @@ class OperatorDemo2 {
 }
 ```
 
-Demo3:
+<br>
+
+## 位移
 ```java
 /*
 	<<:左移	左边最高位丢弃，右边补齐0
@@ -143,11 +148,10 @@ class OperatorDemo3 {
 */
 ```
 
-Demo4:
+<br>
+
+## 实现两个整数变量的交换
 ```java
-/*
-		实现两个整数变量的交换
-*/
 class OperatorTest {
 	public static void main(String[] args) {
 		int a = 10;
