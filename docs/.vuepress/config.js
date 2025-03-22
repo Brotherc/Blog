@@ -116,16 +116,10 @@ module.exports = {
             },
             {
                 title: '前端',
-                path: '/blog/document/front/typescript',
+                path: '/blog/document/front/vue-googel_map',
                 collapsable: true,
                 children: [
-                    {title: "Typescript", path: '/blog/document/front/typescript'},
-                    {title: "Vue-集成谷歌地图", path: '/blog/document/front/vue-googel_map'},
-                    {title: "Augular", path: '/blog/document/front/Angular-Common-operations'},
-                    {title: "Augular-样式与交互", path: '/blog/document/front/Angular-style'},
-                    {title: "Augular-表单", path: '/blog/document/front/Angular-form'},
-                    {title: "Augular-网络", path: '/blog/document/front/Angular-http'},
-                    {title: "第三方库", path: '/blog/document/front/momentJs'}
+                    {title: "Vue实现谷歌地图集成", path: '/blog/document/front/vue-googel_map'}
                 ]
             }, {
                 title: '后端',

@@ -1,14 +1,14 @@
 ---
-title: Vue-集成Google Map
+title: Vue实现谷歌地图集成
 tags:
   - Vue
+  - Google Map
 ---
-## Get an API Key
-参考:  
-[https://developers.google.cn/maps/documentation/javascript/get-api-key](https://developers.google.cn/maps/documentation/javascript/get-api-key)  
+## 申请API Key
+详情见:[https://developers.google.cn/maps/documentation/javascript/get-api-key](https://developers.google.cn/maps/documentation/javascript/get-api-key)  
 
-## Demo
-googleMap.html:
+## 原生Demo实现
+googleMap.html
 ```html
 <!DOCTYPE html>
 <html>
@@ -39,30 +39,23 @@ googleMap.html:
       }
     </script>
     <!-- 将YOUR_API_KEY替换成可用的API Key -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
   </body>
 </html>
 ```
 
-## Vue集成Google Map
-
-### Get an API Key
-```
-参考上述操作
-```
+## Vue实现
 
 ### Typescript版本集成
 
-**1.安装依赖**
+**1. 安装依赖**
 
 ```sh
 npm install vue2-google-maps
 ```
-参考：  
-[https://github.com/xkjyeah/vue-google-maps#readme](https://github.com/xkjyeah/vue-google-maps#readme)  
+详情见：[https://github.com/xkjyeah/vue-google-maps#readme](https://github.com/xkjyeah/vue-google-maps#readme)  
 
-**2.googleMap.ts代码**
+**2. googleMap.ts**
 
 ```typescript
 import Vue from 'vue'
@@ -76,13 +69,11 @@ Vue.use(VueGoogleMaps, {
   installComponents: true
 })
 ```
-错误：
-```
-Could not find a declaration file for module 'vue2-google-maps'.
-...
-```
-解决：
-创建vue2-google-maps.d.ts,并添加以下内容
+遇到错误：
+> Could not find a declaration file for module 'vue2-google-maps'.
+> ...
+
+解决：创建vue2-google-maps.d.ts，并添加以下内容
 ```typescript
 declare module 'vue2-google-maps' {
 
@@ -95,10 +86,9 @@ declare module 'vue2-google-maps' {
 
 }
 ```
-参考：  
-[https://github.com/xkjyeah/vue-google-maps/issues/560](https://github.com/xkjyeah/vue-google-maps/issues/560)  
+详情见：[https://github.com/xkjyeah/vue-google-maps/issues/560](https://github.com/xkjyeah/vue-google-maps/issues/560)  
 
-**3.googleMap.html**
+**3. googleMap.html**
 
 ```html
 <GmapMap
@@ -109,22 +99,22 @@ declare module 'vue2-google-maps' {
 >
 </GmapMap>
 ```
-错误：如果是单页面应用则不会出现以下错误
-```
-error .../node_modules/vue2-google-maps/dist/components/infoWindow.vue:3
-^
+遇到报错：如果是单页面应用则不会出现以下错误  
 
-SyntaxError: Unexpected token <
-...
-```
-解决：需要将ssr相关配置关闭，不同框架修改不同，本人是使用Quasar框架需修改以下配置
+> error .../node_modules/vue2-google-maps/dist/components/infoWindow.vue:3
+> ^
+> 
+> SyntaxError: Unexpected token <
+
+
+解决：需要将ssr相关配置关闭，不同框架修改不同，我使用的是Quasar框架需修改以下配置
 package.json
 ```json
 {
-  ...
+  // ...
   "scripts": {
     "serve": "quasar dev -m ssr" // 将ssr修改为spa
-    ...
+    // ...
   },
 }
 ```
@@ -137,18 +127,17 @@ module.exports = function () {
   }
 }
 ```
-参考：  
-[https://github.com/xkjyeah/vue-google-maps/issues/493](https://github.com/xkjyeah/vue-google-maps/issues/493)  
+详情见：[https://github.com/xkjyeah/vue-google-maps/issues/493](https://github.com/xkjyeah/vue-google-maps/issues/493)  
 
-### Typescript版本集成(服务端渲染)
-**1.googleMap.ts代码**
+## 服务端渲染实现
+**1.googleMap.ts**
 
 ```typescript
-...
+// ...
 mounted() {
   this.loadAMapJS().then(result => {
     if (result) {
-      //刷新地图初始化
+      // 刷新地图初始化
       this.initialize();
     }
   });
@@ -188,7 +177,7 @@ asyncLoadJs(url: any) {
   })
 }
 
-//初始化地圖
+// 初始化地圖
 initialize() {
   this.centerDot = new google.maps.LatLng(22.2041179884, 113.557519102);
   const options = {
@@ -199,16 +188,14 @@ initialize() {
   this.map = new google.maps.Map(document.getElementById("map"), options);
 }
 ```
-错误：有可能会出现
-```
-Cannot find name 'google'
-```
+遇到报错：有可能会出现
+> Cannot find name 'google'
+
 解决：
 ```typescript
 declare let google: any;
 ```
-参考：  
-[https://stackoverflow.com/questions/50054386/using-the-object-from-external-javascript-file-inside-typescript](https://stackoverflow.com/questions/50054386/using-the-object-from-external-javascript-file-inside-typescript)  
+详情见：[https://stackoverflow.com/questions/50054386/using-the-object-from-external-javascript-file-inside-typescript](https://stackoverflow.com/questions/50054386/using-the-object-from-external-javascript-file-inside-typescript)  
 
 **2.googleMap.html**
 
@@ -216,20 +203,13 @@ declare let google: any;
 <div id="map" style="height: 600px; width: 1000px;"></div>
 ```
 
-### 界面问题
+## 其它问题
 **1.出现此页面无法正确加载Google地图。的弹窗**
+在Google云平台的[应用限制]里我们对密钥使用进行限制，只允许特定的地址使用密钥，这样可以防止我们的配额泄露或被窃取。  
 
-```
-限制密钥
-在Google云平台的[应用限制]里我们对密钥使用进行限制，只允许特定的地址使用密钥，这样可以防止我们的配额泄露或被窃取。
-```
+
 **2.出现For development purposes only的覆盖层**
-
-```
-正常使用API Key需要开通结算账户
-在Google云平台的[导航菜单]-[结算]中关联结算账户，注意需要信用卡验证身份，支持VISA、运通、JCB、MasterCard，暂不支持银联。
-验证身份时会先扣除一美元，验证成功后会返还。
-```
+正常使用API Key需要开通结算账户。在Google云平台的[导航菜单]-[结算]中关联结算账户，注意需要信用卡验证身份，支持VISA、运通、JCB、MasterCard，暂不支持银联。 验证身份时会先扣除一美元，验证成功后会返还。  
 
 
 
