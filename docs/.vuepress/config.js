@@ -140,14 +140,6 @@ module.exports = {
                     {title: "【工作】Oracle开发代码速查", path: '/blog/document/database/Oracle'}
                 ]
             }, {
-                title: 'ORM',
-                path: '/blog/document/mybatis/Mybatis',
-                collapsable: true,
-                children: [
-                    {title: "Mybatis", path: '/blog/document/mybatis/Mybatis'},
-                    {title: "MybatisPlus", path: '/blog/document/mybatis/Mybatis-plus'}
-                ]
-            }, {
                 title: '设计模式',
                 path: '/blog/document/pattern/Simple-factory',
                 collapsable: true,
