@@ -129,6 +129,7 @@ module.exports = {
                     {title: "【知识】搞懂位运算", path: '/blog/document/backend/Java-bit-operation'},
                     {title: "【工作】Java高频代码备忘录", path: '/blog/document/backend/JavaCodeMemo'},
                     {title: "【工作】Guava开发必备代码库", path: '/blog/document/backend/Google-Guava-Common-operations'},
+                    {title: "【工作】Mybatis高频代码备忘录", path: '/blog/document/backend/Mybatis'},
                     {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
             }, {

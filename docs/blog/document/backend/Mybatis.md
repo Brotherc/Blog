@@ -1,23 +1,73 @@
 ---
-title: MybatisPlus
+title: 【工作】Mybatis高频代码备忘录
 tags:
-  - Mybatis-plus
+  - Mybatis
 ---
 
-## 常用操作
+## Mapper.xml使用
+**消除SQL语句where查询的第一个and**
+```sql
+<where>
+    <if test="attr1 != null and attr1 != ''">
+        (LOWER(COLUMN1) LIKE CONCAT(CONCAT('%', LOWER(#{attr1})), '%'))
+    </if>
 
-### max查询
-
-```java
-// entity
-Object obj = new Object;
-// 查询max
-QueryWrapper<Object> queryWrapper = new QueryWrapper<>();
-queryWrapper.select("NVL(MAX(SEQ_NO), 0)");
-int seqNo = getObj(queryWrapper, o -> ((BigDecimal) o).intValue());
+    <if test="attr2 != null and attr2 != ''">
+        AND (LOWER(COLUMN2) LIKE CONCAT(CONCAT('%', LOWER(#{attr2})), '%'))
+    </if>
+</where>
 ```
 
-### 数据加解密操作
+**在mapper.xml中引用其他mapper.xml文件中代码片段**
+ShareMapper.xml
+```xml
+<mapper namespace="com.company.ShareMapper">
+    <sql id="someSQL">
+       id,name
+    </sql>
+</mapper>
+```
+CustomMapper.xml
+```xml
+<mapper namespace="com.company.CustomMapper">
+    <select id="selectSome" >
+        select
+       <include refid="com.company.ShareMapper.someSQL"/>
+        from t
+    </select>
+</mapper>
+```
+
+<br>
+
+## 复杂操作
+**查询忽略关键字(Oracle)**
+```java
+public static String replaceUnderlineOrPercent(String content) {
+  String SOURCE_UNDERLINE = "_";
+  String SOURCE_PERCENT = "%";
+  String SOURCE_SLASHLINE = "\\\\";
+  String TARGET_UNDERLINE = "\\\\_";
+  String TARGET_PERCENT = "\\\\%";
+  String TARGET__SLASHLINE = "\\\\\\\\";
+  if (StringUtils.hasText(content)) {
+    String result = content.replaceAll("\\\\", "\\\\\\\\").replaceAll("_", "\\\\_").replaceAll("%", "\\\\%");
+    return result;
+  } else {
+    return content;
+  }
+}
+```
+```xml
+<if test="keyword != null and keyword != ''">
+  AND (
+  USER_ACCOUNT LIKE CONCAT(CONCAT('%', #{keyword, jdbcType=VARCHAR}), '%')ESCAPE '\' OR
+  NICK_NAME LIKE CONCAT(CONCAT('%', #{keyword, jdbcType=VARCHAR}), '%')ESCAPE '\'
+  )
+</if>
+```
+
+**数据加解密操作**
 ```java
 /**
  * AES对称加密
@@ -141,6 +191,16 @@ public class User {
     SELECT * FROM USER;
   </select>
 ```
-注：
 - 使用Mybatis或MybtisPlug查询无需额外操作
 - 如果查询条件包括加密字段，需要加密查询条件
+
+**Mybatis-plus max查询**
+```java
+// entity
+Object obj = new Object();
+// 查询max
+QueryWrapper<Object> queryWrapper = new QueryWrapper<>();
+queryWrapper.select("NVL(MAX(SEQ_NO), 0)");
+int seqNo = getObj(queryWrapper, o -> ((BigDecimal) o).intValue());
+```
+

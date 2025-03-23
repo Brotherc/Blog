@@ -54,7 +54,7 @@ private final Cache<String, String> cache =
 
 <br>
 
-### File
+## File
 ```java
 String text = CharStreams.toString(new InputStreamReader(new FileInputStream("d:/sample.txt"), "UTF-8"));
 ```
