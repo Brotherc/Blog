@@ -161,8 +161,8 @@ module.exports = {
                 path: '/blog/document/spring/spring-Common-operations',
                 collapsable: true,
                 children: [
-                    {title: "【工作】策略模式在Spring中实现", path: '/blog/document/spring/Spring-strategy'},
-                    {title: "【工作】Spring奇巧淫技", path: '/blog/document/spring/spring-Common-operations'}
+                    {title: "【工作】Spring奇巧淫技", path: '/blog/document/spring/spring-Common-operations'},
+                    {title: "【工作】策略模式在Spring中实现", path: '/blog/document/spring/Spring-strategy'}
                 ]
             }, {
                 title: '认证授权',
