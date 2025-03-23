@@ -1,35 +1,55 @@
 ---
-title: 限流-Guava
+title: 【知识】基于Guava限流
 tags:
+  - Guava
   - 限流
 ---
+## 限流场景
+- 12306
+- 双十一（11.11零点，由于各种商家的促销活动(前XX名免单)，支付宝进入排队支付状态）
+- 外卖业务
 
--  **限流场景**
-
-12306
-双十一（11.11零点，由于各种商家的促销活动(前XX名免单)，支付宝进入排队支付状态）
-外卖业务
-
--  **常见的限流方案**  
-手动实现负载均衡
+## 常见的限流方案
+### 手动实现负载均衡
 ![](./assets/guava-xianliu/1.jpg)
-验证码
+### 验证码
+12306故意把验证码弄的模糊不清，影响消费者下单，从而限流
 ![](./assets/guava-xianliu/2.jpg)
-容器限流
-![](./assets/guava-xianliu/3.jpg)
-限流总资源数
-![](./assets/guava-xianliu/4.jpg)
-限流某个接口的总并发/请求数
-![](./assets/guava-xianliu/5.jpg)
-Nginx限流
+### 容器限流
+- 以Tomcat容器为例，其Connector其中一种配置有如下几个参数
+- acceptCount：如果Tomcat的线程都忙于响应，新来的连接会进入队列排队，如果超出排队大小，则拒绝连接
+- maxConnections：瞬时最大连接数，超出的会排队等待
+- maxThreads：Tomcat能用来处理请求的最大线程数，如果请求处理量一直远远大于最大线程数则可能会僵死
+### 限流总资源数
+如果有的资源是稀缺资源(如数据库连接、线程)，而且可能有多个系统都会去使用它，那么需要限制应用  
+可以使用池化技术来限制总资源数：连接池、线程池  
+比如分配给每个应用的数据库连接是100  
+那么本应用最多可以使用100个资源，超出了可以等待或者抛异常
+### 限流某个接口的总并发/请求数
+如果接口可能会有突发访问情况，但又担心访问量太大造成崩溃，如抢购业务；  
+这个时候就需要限制这个接口的总并发请求数了；  
+因为粒度比较细，可以为每个接口都设置相应的阈值。可以使用Java中的AtomicLong进行限流
+```java
+try {
+    if (atomic.incrementAndGet() > 限流数) {
+        // 拒绝请求
+    }
+    // 处理请求
+} finally {
+    atomic.decrementAndGet();
+}
+```
+### Nginx限流
+Nginx提供了一个叫ngx_http_limit_req_module的模块进行流量控制
 ![](./assets/guava-xianliu/6.jpg)
-消息队列
+### 消息队列
+通过RabbitMQ，RocketMQ，ActiveMQ，ZeroMQ，Kafka把流量做均匀，限制高流量涌入
 ![](./assets/guava-xianliu/7.jpg)
-利用Netflix的Hystrix限流
+### 利用Netflix的Hystrix限流
 ![](./assets/guava-xianliu/8.jpg)
 
 ##  Guava是什么
-![](./assets/guava-xianliu/9.jpg)
+Guava是一个Google开发的基于java的类库集合的扩展项目，包括collectiions，caching，primitives support，concurrency libraries，common annotations，string processing，I/O等等，这些高质量的API可以使你的JAVA代码更加优雅，更加简洁，让你工作更加轻松愉快  
 限流的概念
 ![](./assets/guava-xianliu/10.jpg)
 
@@ -45,8 +65,7 @@ Nginx限流
 
 ##  Guava限流实战
 Guava RateLimiter实现平滑限流
-![](./assets/guava-xianliu/20.jpg)
--  **平滑突发限流**
+-  **平滑突发限流(SmoothBursty)**
 
 ```java
 import com.google.common.util.concurrent.RateLimiter;
@@ -122,7 +141,7 @@ public class SmoothBurstyRateLimitTest03 {
 ```
 ![](./assets/guava-xianliu/19.jpg)
 
--  **平滑预热限流**
+-  **平滑预热限流(SmoothWarmingUp)**
 
 ```java
 import com.google.common.util.concurrent.RateLimiter;
