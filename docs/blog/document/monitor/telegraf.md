@@ -1,7 +1,8 @@
 ---
-title: Telegraf
+title: Telegraf篇
 tags:
-- telegraf
+  - 监控
+  - telegraf
 ---
 ## Jolokia2 Input Plugins
 ### Jolokia Proxy

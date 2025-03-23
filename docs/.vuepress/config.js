@@ -144,7 +144,7 @@ module.exports = {
                     {title: "【工作】Oracle开发代码速查", path: '/blog/document/database/Oracle'}
                 ]
             }, {
-                title: 'spring家族',
+                title: 'spring',
                 path: '/blog/document/spring/spring-Common-operations',
                 collapsable: true,
                 children: [
@@ -204,18 +204,10 @@ module.exports = {
                 collapsable: true,
                 path: '/blog/document/monitor/prometheus',
                 children: [
-                    {title: "Prometheus", path: '/blog/document/monitor/prometheus'},
-                    {title: "Influxdb", path: '/blog/document/monitor/influxdb'},
-                    {title: "Telegraf", path: '/blog/document/monitor/telegraf'},
-                    {title: "Kapacitor", path: '/blog/document/monitor/kapacitor'}
-                ]
-            }, {
-                title: '容器',
-                path: '/blog/document/container/docker',
-                collapsable: true,
-                children: [
-                    {title: "Docker-基础", path: '/blog/document/container/docker'},
-                    {title: "Docker-安装Oracle12", path: '/blog/document/container/docker-Oracle-12c'}
+                    {title: "【工作】Prometheus篇", path: '/blog/document/monitor/prometheus'},
+                    {title: "【工作】Influxdb篇", path: '/blog/document/monitor/influxdb'},
+                    {title: "【工作】Telegraf篇", path: '/blog/document/monitor/telegraf'},
+                    {title: "【工作】Kapacitor篇", path: '/blog/document/monitor/kapacitor'}
                 ]
             }, {
                 title: '工作实践',

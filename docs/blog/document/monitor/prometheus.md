@@ -1,6 +1,7 @@
 ---
-title: Prometheus
+title: 【工作】Prometheus篇
 tags:
+  - 监控
   - prometheus
 ---
 

@@ -1,7 +1,8 @@
 ---
-title: Influxdb
+title: 【工作】Influxdb篇
 tags:
-- influxdb
+  - 监控
+  - influxdb
 ---
 ## Query查询
 ### 注意点

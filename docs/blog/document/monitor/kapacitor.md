@@ -1,6 +1,7 @@
 ---
-title: kapacitor
+title: 【工作】kapacitor篇
 tags:
+  - 监控
   - kapacitor
 ---
 
