@@ -131,6 +131,7 @@ module.exports = {
                     {title: "【工作】Guava开发必备代码库", path: '/blog/document/backend/Google-Guava-Common-operations'},
                     {title: "【工作】Mybatis高频代码备忘录", path: '/blog/document/backend/Mybatis'},
                     {title: "【问题】RSA私钥获取异常", path: '/blog/document/backend/encoderissue'},
+                    {title: "【问题】Skywalking启动异常", path: '/blog/document/backend/skywalking'},
                     {title: "【手册】linux常用指令", path: '/blog/document/backend/linux-Commonly-used-instructions'},
                     {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
@@ -164,14 +165,6 @@ module.exports = {
                     }
                 ]
             }, {
-                title: '链路追踪',
-                collapsable: true,
-                path: '/blog/document/traceroute/skywalking',
-                children: [
-                    {title: "Skywalking-常见问题", path: '/blog/document/traceroute/skywalking'}
-                ]
-            },
-            {
                 title: '分布式ID',
                 path: '/blog/document/distributed_id/distributed-id',
                 collapsable: true,
