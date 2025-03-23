@@ -1,30 +1,11 @@
 ---
-title: RestTemplate
+title: 【工作】RestTemplate实战
 tags:
-- spring cloud
+  - Java
+  - Spring
 ---
 
-## 使用
-
-### 上传文件
-
-1. 从请求头获取文件数据
-```java
-private MultiValueMap<String, Object> parseMultipartRequest(HttpServletRequest request) {
-    MultiValueMap<String, Object> multiValueMap = new LinkedMultiValueMap<>();
-        if (request instanceof MultipartRequest) {
-            MultipartRequest multipartRequest = (MultipartRequest) request;
-            for (Map.Entry<String, List<MultipartFile>> entry : multipartRequest.getMultiFileMap().entrySet()) {
-                for (MultipartFile file : entry.getValue()) {
-                    multiValueMap.add(entry.getKey(), file.getResource());
-                }
-            }
-        }
-    return CollectionUtils.isEmpty(multiValueMap) ? null : multiValueMap;
-}
-```
-
-2. RestTemplate请求通用类
+## 请求通用类封装
 ```java
 @Slf4j
 @Component
@@ -163,26 +144,41 @@ public class RestTemplateHelper {
 
 }
 ```
-
-3. 调用
 ```java
 ResponseEntity<byte[]> responseEntity = restTemplateHelper.request(
         请求路径, 请求方法, 请求头, 请求参数, HTTP消息实体的传输长度, 数据类型, parseMultipartRequest(request)
 );
 ```
 
-参考:  
-[https://www.baeldung.com/spring-rest-template-multipart-upload](https://www.baeldung.com/spring-rest-template-multipart-upload)  
-[https://stackoverflow.com/questions/26964688/multipart-file-upload-using-spring-rest-template-spring-web-mvc](https://stackoverflow.com/questions/26964688/multipart-file-upload-using-spring-rest-template-spring-web-mvc)  
+<br>
 
+## 文件上传
+从请求头获取文件数据
+```java
+private MultiValueMap<String, Object> parseMultipartRequest(HttpServletRequest request) {
+    MultiValueMap<String, Object> multiValueMap = new LinkedMultiValueMap<>();
+        if (request instanceof MultipartRequest) {
+            MultipartRequest multipartRequest = (MultipartRequest) request;
+            for (Map.Entry<String, List<MultipartFile>> entry : multipartRequest.getMultiFileMap().entrySet()) {
+                for (MultipartFile file : entry.getValue()) {
+                    multiValueMap.add(entry.getKey(), file.getResource());
+                }
+            }
+        }
+    return CollectionUtils.isEmpty(multiValueMap) ? null : multiValueMap;
+}
+```
 
-### 下载文件如何获取数据
-1. 响应数据类型使用字节数组进行接收byte[]  
+<br>
 
-参考:  
-[https://stackoverflow.com/questions/70632754/download-file-of-content-type-octet-stream-using-resttemplate](https://stackoverflow.com/questions/70632754/download-file-of-content-type-octet-stream-using-resttemplate)  
+## 文件下载获取数据
+响应数据类型使用字节数组进行接收byte[]  
+详情见:[https://stackoverflow.com/questions/70632754/download-file-of-content-type-octet-stream-using-resttemplate](https://stackoverflow.com/questions/70632754/download-file-of-content-type-octet-stream-using-resttemplate)  
 
-### 处理HTTP状态码为400、500等错误码时，如何获取到其响应结果内容
+<br>
+
+## 自定义异常处理
+处理HTTP状态码为400、500等错误码时，如何获取到其响应结果内容
 ```java
 /**
  * 设置自定义异常处理器，RestTemplate默认对于4**或5**的状态码会认为异常
@@ -206,6 +202,3 @@ public RestTemplate restTemplate(RestTemplateBuilder builder) {
     return builder.errorHandler(responseErrorHandler).build();
 }
 ```
-
-参考:  
-[https://blog.csdn.net/Staba/article/details/124405234](https://blog.csdn.net/Staba/article/details/124405234)  

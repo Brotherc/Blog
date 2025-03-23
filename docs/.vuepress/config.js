@@ -162,36 +162,9 @@ module.exports = {
                 collapsable: true,
                 children: [
                     {title: "【工作】Spring奇巧淫技", path: '/blog/document/spring/spring-Common-operations'},
-                    {title: "【工作】策略模式在Spring中实现", path: '/blog/document/spring/Spring-strategy'}
-                ]
-            }, {
-                title: '认证授权',
-                path: '/blog/document/spring/SpringSecurity-start',
-                collapsable: true,
-                children: [
-                    {title: "SpringSecurity-开始开发", path: '/blog/document/spring/SpringSecurity-start'},
-                    {
-                        title: "SpringSecurity-使用SpringMVC开发RESTfulAPI",
-                        path: '/blog/document/spring/SpringSecurity-SpringMVC-RESTful-API'
-                    },
-                    {title: "SpringSecurity-开发基于表单的认证", path: '/blog/document/spring/SpringSecurity-form'},
-                    {title: "SpringSecurity-OAuth2集成第三方登录", path: '/blog/document/spring/SpringSecurity-oauth2'},
-                    {
-                        title: "SpringSecurity-认证流程源码级详解",
-                        path: '/blog/document/spring/SpringSecurity-sourceCode'
-                    },
-                    {
-                        title: "SpringSecurity-Social开发第三方认证",
-                        path: '/blog/document/spring/SpringSocial-development-third'
-                    }
-                ]
-            }, {
-                title: '微服务',
-                collapsable: true,
-                path: '/blog/document/microservice/resttemplate',
-                children: [
-                    {title: "Resttemplate", path: '/blog/document/microservice/resttemplate'},
-                    {title: "Feign", path: '/blog/document/microservice/feign'}
+                    {title: "【工作】策略模式在Spring中实现", path: '/blog/document/spring/Spring-strategy'},
+                    {title: "【工作】RestTemplate实战", path: '/blog/document/spring/resttemplate'},
+                    {title: "【工作】Feign", path: '/blog/document/spring/feign'}
                 ]
             }, {
                 title: '限流熔断',

@@ -1,12 +1,10 @@
 ---
-title: Feign
+title: 【工作】Feign
 tags:
-  - spring cloud
+  - Java
+  - Spring
 ---
-## 常用操作
-
-### Feign接口调用如何获取响应头
-
+## 获取响应头
 ```java
 @RestController
 public class TestController {
@@ -20,7 +18,6 @@ public class TestController {
   }
 }
 ```
-
 ```java
 @RestController
 public class ReciveController {
@@ -38,10 +35,7 @@ public interface ReciveClient {
 }
 ```
 
-参考：  
-[https://stackoverflow.com/questions/38742191/get-headers-feign-netflix](https://stackoverflow.com/questions/38742191/get-headers-feign-netflix)  
-
-### 输出日志
+## 日志打印
 ```yaml
 logging:
   level:
