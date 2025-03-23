@@ -16,15 +16,15 @@ java -jar
 
 **问题：**  
 启动报错
-> // 省略了前面部分无关日志
-> Caused by: java.lang.ExceptionInInitializerError: `agent.service_name` is missing.
->        at org.apache.skywalking.apm.agent.core.conf.SnifferConfigInitializer.initializeCoreConfig(SnifferConfigInitializer.java:109)
->        at org.apache.skywalking.apm.agent.SkyWalkingAgent.premain(SkyWalkingAgent.java:68)
->        ... 6 more
+> // 省略了前面部分无关日志  
+> Caused by: java.lang.ExceptionInInitializerError: `agent.service_name` is missing.  
+>        at org.apache.skywalking.apm.agent.core.conf.SnifferConfigInitializer.initializeCoreConfig(SnifferConfigInitializer.java:109)  
+>        at org.apache.skywalking.apm.agent.SkyWalkingAgent.premain(SkyWalkingAgent.java:68)  
+>        ... 6 more  
 
 **解决：**  
-把SW_AGENT_COLLECTOR_BACKEND_SERVICES替换为skywalking.collector.backend_service
-把SW_AGENT_NAME替换为skywalking.agent.service_name
+把SW_AGENT_COLLECTOR_BACKEND_SERVICES替换为skywalking.collector.backend_service  
+把SW_AGENT_NAME替换为skywalking.agent.service_name  
 ```sh
 java -jar 
 -javaagent:/user/local/skywalking-agent.jar 
@@ -32,6 +32,8 @@ java -jar
 -Dskywalking.agent.service_name=client-service 
 /user/local/app/client-service.jar
 ```
+
+<br>
 
 ## 2.客户端Agent启动报错
 Skywalking服务端部署在192.168.1.100，将skywalking-agent.jar拷贝至客户端所在服务器的`/user/local/skywalking-agent.jar`，启动java客户端应用
@@ -45,17 +47,17 @@ java -jar
 
 **问题：**  
 请求client-service服务的接口，发现Skywalking服务端UI界面并未查询出任何数据，查看client-service服务启动日志显示错误
-> ERROR 2023-04-19 08:51:43.483 main SnifferConfigInitializer : Failed to read the config file, skywalking is going to run in default config. 
-> org.apache.skywalking.apm.agent.core.conf.ConfigNotFoundException: Failed to load agent.config.
->         at org.apache.skywalking.apm.agent.core.conf.SnifferConfigInitializer.loadConfig(SnifferConfigInitializer.java:259)
->         at org.apache.skywalking.apm.agent.core.conf.SnifferConfigInitializer.initializeCoreConfig(SnifferConfigInitializer.java:72)
->         at org.apache.skywalking.apm.agent.SkyWalkingAgent.premain(SkyWalkingAgent.java:68)
->         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
->         at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
->         at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
->         at java.lang.reflect.Method.invoke(Method.java:498)
->         at sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:386)
->         at sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:401)
+> ERROR 2023-04-19 08:51:43.483 main SnifferConfigInitializer : Failed to read the config file, skywalking is going to run in default config.   
+> org.apache.skywalking.apm.agent.core.conf.ConfigNotFoundException: Failed to load agent.config.  
+>         at org.apache.skywalking.apm.agent.core.conf.SnifferConfigInitializer.loadConfig(SnifferConfigInitializer.java:259)  
+>         at org.apache.skywalking.apm.agent.core.conf.SnifferConfigInitializer.initializeCoreConfig(SnifferConfigInitializer.java:72)  
+>         at org.apache.skywalking.apm.agent.SkyWalkingAgent.premain(SkyWalkingAgent.java:68)  
+>         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)  
+>         at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)  
+>         at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)  
+>         at java.lang.reflect.Method.invoke(Method.java:498)  
+>         at sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:386)  
+>         at sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:401)  
 
 **解决：**  
 从官网下载skywalking-agent.zip后进行解压，需要把整个skywalking-agent目录放到服务器上，而不是只拷贝一个skywalking-agent.jar
