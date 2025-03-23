@@ -1,10 +1,11 @@
 ---
-title: Spring-常用操作
+title: 【工作】Spring奇巧淫技
 tags:
+  - Java
   - Spring
 ---
-### 初始化bean时，普通成员变量获取不到@Value注解的变量值
-问题：
+## 成员变量获取配置属性值
+初始化bean时，普通成员变量获取不到@Value注解的变量值
 ```java
 public class Xxx {
     @Value("${value}")
@@ -15,13 +16,13 @@ public class Xxx {
     }};
 }
 ```
-修改：
 ```java
 public class Xxx {
     @Value("${value}")
     private String value;
     private Map<String, String> map;
 
+    // 通过@PostConstruct注入
     @PostConstruct
     private void init(){
       map = new HashMap<String, String>(){{
@@ -30,17 +31,10 @@ public class Xxx {
     }
 }
 ```
-参考：  
-[https://blog.csdn.net/zlp1992/article/details/78346420](https://blog.csdn.net/zlp1992/article/details/78346420)  
 
-### springboot yaml文件数组表示
-```yaml
-array: item1, item2, item3, item4, item5
-```
-参考：  
-[https://stackoverflow.com/questions/26699385/spring-boot-yaml-configuration-for-a-list-of-strings](https://stackoverflow.com/questions/26699385/spring-boot-yaml-configuration-for-a-list-of-strings)  
+<br>
 
-### springboot 获取上下文
+## spring上下文
 ```java
 @Configuration
 public class ApplicationContextConfiguration {
@@ -96,10 +90,11 @@ public final class AppEnvContext {
 ```java
 String env = AppEnvContext.getActiveProfile();
 ```
-参考：  
-[https://blog.csdn.net/qq_27818541/article/details/105719962](https://blog.csdn.net/qq_27818541/article/details/105719962)  
 
-### spring 获取对象的属性名&属性值
+<br>
+
+## spring反射类应用
+获取对象的属性名&属性值
 ```java
 private void putAllField(Object obj, Map<String, Object> item) {
     PropertyDescriptor[] beanProperties = ReflectUtils.getBeanProperties(obj.getClass());
@@ -121,15 +116,17 @@ private void putAllField(Object obj, Map<String, Object> item) {
 }
 ```
 
-### 禁用swagger-ui
+<br>
+
+## 禁用swagger-ui
 ```properties
 springfox.documentation.enabled=false
 ```
-参考:  
-[https://stackoverflow.com/questions/66596813/springfox-boot-starter-how-to-disable-swagger-ui-for-production-profile](https://stackoverflow.com/questions/66596813/springfox-boot-starter-how-to-disable-swagger-ui-for-production-profile)  
-[https://www.baeldung.com/swagger-ui-turn-off-in-production](https://www.baeldung.com/swagger-ui-turn-off-in-production)  
 
-### 删除引用jar包中的无用bean
+<br>
+
+## 移除三方依赖的Bean
+删除引用jar包中不想注入的bean
 ```java
 @Component
 public class RemoveRegistryBeanFactoryPostProcessor implements BeanDefinitionRegistryPostProcessor {
@@ -146,5 +143,3 @@ public class RemoveRegistryBeanFactoryPostProcessor implements BeanDefinitionReg
 
 }
 ```
-参考：  
-[https://www.jb51.net/article/252654.htm](https://www.jb51.net/article/252654.htm)  

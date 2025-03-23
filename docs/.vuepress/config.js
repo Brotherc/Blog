@@ -130,7 +130,6 @@ module.exports = {
                     {title: "【工作】Java高频代码备忘录", path: '/blog/document/backend/JavaCodeMemo'},
                     {title: "【工作】Guava开发必备代码库", path: '/blog/document/backend/Google-Guava-Common-operations'},
                     {title: "【工作】Mybatis高频代码备忘录", path: '/blog/document/backend/Mybatis'},
-                    {title: "【工作】策略模式在Spring中实现", path: '/blog/document/backend/Spring-strategy'},
                     {title: "【问题】RSA私钥获取异常", path: '/blog/document/backend/encoderissue'},
                     {title: "【手册】linux常用指令", path: '/blog/document/backend/linux-Commonly-used-instructions'},
                     {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
@@ -158,11 +157,12 @@ module.exports = {
                     {title: "Logback", path: '/blog/document/log/logback'}
                 ]
             }, {
-                title: 'spring',
+                title: 'spring家族',
                 path: '/blog/document/spring/spring-Common-operations',
                 collapsable: true,
                 children: [
-                    {title: "Spring-常用操作", path: '/blog/document/spring/spring-Common-operations'}
+                    {title: "【工作】策略模式在Spring中实现", path: '/blog/document/spring/Spring-strategy'},
+                    {title: "【工作】Spring奇巧淫技", path: '/blog/document/spring/spring-Common-operations'}
                 ]
             }, {
                 title: '认证授权',
