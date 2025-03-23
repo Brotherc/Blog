@@ -1,8 +1,11 @@
 ---
-title: Spring-策略模式
+title: 【工作】策略模式在Spring中实现
 tags:
+  - Java
   - 设计模式
+  - Spring
 ---
+
 ```java
 public interface Strategy {
   Object verificate(StrategyBo strategyBo);
@@ -37,7 +40,6 @@ public enum BizType {
   B("b", "bStrategy");
 
   private String features;
-
   private String service;
   
   public static BizType get(String features) {
@@ -48,26 +50,22 @@ public enum BizType {
     }
     return null;
   }
-
 }
 ```
 ```java
 @Component
 public class StrategyFactory {
-
   @Autowired
   private Map<String, Strategy> strategyMap;
 
   public Strategy creator(String serviceName){
     return strategyMap.get(serviceName);
   }
-
 }
 ```
 ```java
 @Service
 public class TestService {
-
   @Autowired
   private StrategyFactory strategyFactory;
 
@@ -78,8 +76,5 @@ public class TestService {
     }
     return null;
   }
-
 }
 ```
-参考：  
-[https://blog.csdn.net/kismet2399/article/details/83385197](https://blog.csdn.net/kismet2399/article/details/83385197)  

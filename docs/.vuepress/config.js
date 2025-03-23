@@ -130,6 +130,7 @@ module.exports = {
                     {title: "【工作】Java高频代码备忘录", path: '/blog/document/backend/JavaCodeMemo'},
                     {title: "【工作】Guava开发必备代码库", path: '/blog/document/backend/Google-Guava-Common-operations'},
                     {title: "【工作】Mybatis高频代码备忘录", path: '/blog/document/backend/Mybatis'},
+                    {title: "【工作】策略模式在Spring中实现", path: '/blog/document/backend/Spring-strategy'},
                     {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
             }, {
@@ -138,19 +139,6 @@ module.exports = {
                 collapsable: true,
                 children: [
                     {title: "【工作】Oracle开发代码速查", path: '/blog/document/database/Oracle'}
-                ]
-            }, {
-                title: '设计模式',
-                path: '/blog/document/pattern/Simple-factory',
-                collapsable: true,
-                children: [
-                    {title: "简单工厂", path: '/blog/document/pattern/Simple-factory'},
-                    {title: "工厂方法", path: '/blog/document/pattern/Factory-method'},
-                    {title: "抽象工厂", path: '/blog/document/pattern/Abstract-factory'},
-                    {title: "建造者", path: '/blog/document/pattern/builder'},
-                    {title: "原型模式", path: '/blog/document/pattern/prototype'},
-                    {title: "装饰者模式", path: '/blog/document/pattern/decorator'},
-                    {title: "策略模式", path: '/blog/document/pattern/Spring-strategy'}
                 ]
             }, {
                 title: '加解密',

@@ -6,7 +6,7 @@ tags:
 
 ## Mapper.xml使用
 **消除SQL语句where查询的第一个and**
-```sql
+```xml
 <where>
     <if test="attr1 != null and attr1 != ''">
         (LOWER(COLUMN1) LIKE CONCAT(CONCAT('%', LOWER(#{attr1})), '%'))
@@ -18,7 +18,7 @@ tags:
 </where>
 ```
 
-**在mapper.xml中引用其他mapper.xml文件中代码片段**
+**在mapper.xml中引用其他mapper.xml文件中代码片段**  
 ShareMapper.xml
 ```xml
 <mapper namespace="com.company.ShareMapper">
@@ -179,8 +179,9 @@ public class User {
     //...
 }
 ```
-自定义查询：
+
 ```xml
+  <!--自定义查询-->
   <resultMap id="userVo"
              type="com.brotherc.User">
     <result column="user_name" property="userName"
