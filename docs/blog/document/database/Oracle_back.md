@@ -1,28 +1,17 @@
 ---
-title: Oracle开发代码速查
+title: Oracle
 tags:
   - Oracle
 ---
+## 常用操作
 
-## 字符串
-**去除全部空格**
+### 去除全部空格 
+
 ```sql
 SELECT TRIM('   11   ') aa FROM DUAL;
 ```
-**截取字符串**
-```sql
--- 格式1： 
--- a:截取字符串的开始位置（注：当a等于0或1时，都是从第一位开始截取）
--- b:要截取的字符串的长度
-substr(string string, int a, int b);
--- 格式2：
--- a:可以理解为从第a个字符开始截取后面所有的字符串。
-substr(string string, int a) ;
-```
 
-
-## 序列
-**修改序列值**
+### 修改序列值
 ```sql
 ALTER SEQUENCE 序列名 INCREMENT BY 4055;
 ALTER SEQUENCE 序列名 INCREMENT BY -1;
@@ -34,8 +23,18 @@ DROP SEQUENCE 序列名;
 CREATE SEQUENCE 序列名 START WITH 1;
 ```
 
-## 分组
-**分组后统计各种条件的总数**
+### 截取字符串
+```sql
+-- 格式1： 
+-- a:截取字符串的开始位置（注：当a等于0或1时，都是从第一位开始截取）
+-- b:要截取的字符串的长度
+substr(string string, int a, int b);
+-- 格式2：
+-- a:可以理解为从第a个字符开始截取后面所有的字符串。
+substr(string string, int a) ;
+```
+
+### 分组后统计各种条件的总数
 ```sql
 SELECT GENDER,
        SUM(case when USER_TYPE = 1 then 1 else 0 end) USER_TYPE_1,
@@ -45,7 +44,10 @@ SELECT GENDER,
 FROM USER
 GROUP BY GENDER
 ```
-**分组后取第一条记录**
+参考：  
+[https://blog.csdn.net/yangyansong789/article/details/80618320](https://blog.csdn.net/yangyansong789/article/details/80618320)  
+
+### 分组后取第一条记录
 ```sql
 select 查询内容
 from (
@@ -64,33 +66,180 @@ from (
      )
 where xuhao = 1;
 ```
-**分组后排序**
-```sql
-OVER(PARTITION BY... ORDER BY...)
-```
 
-## 数字
-**保留两位小数**
+### 保留两位小数
 ```sql
 select trim(to_char(12.3, '9999999990.99')) from dual
 ```
+参考：  
+[https://blog.csdn.net/heweimingming/article/details/44176595?utm_source=blogxgwz9](https://blog.csdn.net/heweimingming/article/details/44176595?utm_source=blogxgwz9);
 
+### 数据误删，获取最近1小时内的数据
+```sql
+select * from T_TABLE_NAME as of timestamp sysdate - interval '1' hour
+```
 
-## 日期时间
-**计算日期相隔天数**
+### 计算日期相隔天数
 ```sql
 -- TRUNC默认会截取为当天0点
 SELECT TRUNC(SYSDATE) - TRUNC(SYSDATE) FROM DUAL
 ```
-**Date转VARCHAR**
+参考：  
+[https://blog.csdn.net/qq_29171935/article/details/89478520](https://blog.csdn.net/qq_29171935/article/details/89478520)  
+[https://www.cnblogs.com/mingforyou/p/7644308.html](https://www.cnblogs.com/mingforyou/p/7644308.html)  
+
+### Date 转 VARCHAR
 ```sql
 SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS') FROM DUAL
 ```
 
+### OVER(PARTITION BY... ORDER BY...)
+参考：  
+[https://blog.csdn.net/fygkchina/article/details/80521550](https://blog.csdn.net/fygkchina/article/details/80521550)  
+
+## issue
+
+### ORA-28001:口令已经失效
+
+WINDOWS下使用DOS命令行连接oracle数据库  
+sqlplus userName/userPassword@netServiceName
+
+```
+Oracle报错，ORA-28001: 口令已经失效
+```
+
+cmd命令行输入：
+
+```
+sqlplus / as sysdba
+SQL*Plus: Release 11.2.0.1.0 Production on 星期二 10月 17 15:42:58 2017
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+连接到:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+SQL> ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+配置文件已更改
+SQL> alter user 用户名 dentified by 密码 account unlock;
+用户已更改。
+```
+
+再次测试登录即可
+
+### 解决SqlPlus前台程序出现中文乱码的问题
+
+**第一步：**
+
+```
+在sqlplus中执行 select userenv('language') from dual;查看当前数据库的字符集为：SIMPLIFIED CHINESE_CHINA.ZHS16GBK。
+我们只需要把客户端字符集和操作系统字符集都设置成这个就行了
+开始-运行-CMD：
+SET NLS_LANG=SIMPLIFIED CHINESE_CHINA.ZHS16GBK
+以上参数设置只是在当前会话生效
+```
+
+**第二步：**
+
+```
+在环境变量中查找一个名为“NLS_LANG”的环境变量，如果找不到，则新建一个，
+把变量值赋值为：“SIMPLIFIED CHINESE_CHINA.ZHS16GBK”
+```
+
+参考：  
+[http://blog.itpub.net/26839123/viewspace-722870/](http://blog.itpub.net/26839123/viewspace-722870/)  
+
+### 通过 sql developer 导出脚本
+
+![](F:/web/new-blog/docs/blog/document/database/assets/oracle/1.png)  
+![](F:/web/new-blog/docs/blog/document/database/assets/oracle/2.png)  
+
+### Oracle账号
+
+用户名：541509124@qq.com
+密码：LR4ever.1314
+
+参考：  
+[https://blog.csdn.net/dengxt/article/details/81536099](https://blog.csdn.net/dengxt/article/details/81536099)  
+
+## OCP-体系结构
+
+### 工具使用
+- sqlplus
+- pl/sql
+- develop
+- sqldevelop
+- toad
+- ......
+
+### 访问数据库的方式
+- 本机直接通过sock方式访问（IPC）
+```
+sqlplus / as sysdba
+```
+- 通过TCP建立连接到Oracle服务器&Oracle网络配置
+
+ 方式一：
+```
+// ora10g -->必须在 $ORACLE_HOME/network/admin/tnsnames.ora配置出如何访问到远程数据库服务器
+tnsping ora10g
+sqlplus sys/oracle@ora10g as sysdba
+```
+
+  方式二：
+```
+// 不需要任何配置，但oracle服务器必须在listener.ora定义被远程访问的方式
+sqlplus sys/oracle@ip:1521/ora10g as sysdba
+```
+
+### 数据库模型
+1.专用型
+一个进程一个会话
+2.共享型
+
+### 执行sql流程
+- 能执行sql语句的程序或进程就是用户进程
+- 用户进程 执行一个查询语句，比如select * from emp where empno=7839;
+- 用户进程已经跟服务进程建立链接,服务器进程会响应用户进程,一些会话信息就会存储在内存（PGA）中,
+把该用户进程的信息存储到PGA的UGA中。
+- 语句经过PGA处理后传递给实例
+- 实例中的共享池负责处理这条语句
+- 库缓存区去判断语句如何分析--软分析或硬分析(以前是否执行过)
+- sql语句操作的表在哪，表里面的行放在哪个block里面，所以需要数据字典
+- 根据cbo得到的执行计划准备去执行语句，查询语句中的对象存放在哪个表空间的指定的行放在哪个块里
+面，数据字典缓存区得到这些信息
+- 开始执行
+- 判断在数据缓存区data buffer cache中是否缓存需要的块
+- 如果是，在内存读取数据得到所需行的结果返回给用户，用户看到这行的结果
+如果没有，则服务器进程读取data file文件中对应的block到data buffer cache中，data buffer cache中的undo块用来做镜像，
+undo缓存块会对该块做镜像，然后读该镜像中的数据得到行的结果，用户看到执行的结果，
+- redo log buffer记录数据库中块的更改，修改前后的块（提交和未提交）都在undo块中做了镜像，意味着可以写入
+磁盘与不可写入磁盘
+
+- oracle做这么多就是为了尽可能用内存去操作，关系型数据库最重要的就是内存和磁盘
+- 语句执行性能的高低，从shared pool中的library cache和data dict cache的命中率进行判断
+- database buffer cache 命中率 关系到逻辑读（内存取数据）或物理读（磁盘取数据）
+- redo log buffer 记录块的变化
+
+- DBWR进程会将已提交的数据写到物理磁盘data file，只有当redo log buffer 将所有块的变更信息记录下来之后才会开始写
+- 内存中的redo log 日志会定时通过LGWR写到磁盘Redo Log file(主要用于恢复)
+- CKPT保证数据同步，一旦触发，DBWR就开始写数据，接着LGWR也开始写数据（比如手动commit）
+
+- rdbms的实现的一套完整的解决方案
+- 一个实例（内存结构和后台进程）和数据库（物理文件和文件的逻辑结构）构成了oracle服务器
+
+![](./assets/oracle/ocp.jpg)
+
+用户进程产生的日志文件
+```sql
+show parameter user_
+desc v$session v$process v$sql v$sqltext
+```
+```sql
+select username,sid from v$session;
+```
 
 ## PLSQL
 
-**example**  
+### example
 需求：读取TMP_MOBIWEB_PASSWORD表数据写入MOBILEWEB_SERVICE_NUMBER表，并进行相关校验
 ```sql
 --打开输出
@@ -183,6 +332,7 @@ BEGIN
     COMMIT;
 END ;
 ```
+
 需求：创建存储过程进行数据插入
 ```sql
 CREATE OR REPLACE PROCEDURE portal_addUser (userName IN VARCHAR2, account IN VARCHAR2, roleCodes IN VARCHAR2)
@@ -217,44 +367,3 @@ begin
     PORTAL_ADDUSER('userName', 'account', 'roleCode1,roleCode2');
 end;
 ```
-
-## 工具
-**通过sql developer导出脚本**
-![](./assets/oracle/1.png)  
-![](./assets/oracle/2.png)
-
-## 运维
-**数据误删，获取最近1小时内的数据**
-```sql
-select * from T_TABLE_NAME as of timestamp sysdate - interval '1' hour
-```
-
-## 其它问题
-**ORA-28001:口令已经失效**
-> Windows下使用DOS命令行连接oracle数据库，`sqlplus userName/userPassword@netServiceName`，报ORA-28001: 口令已经失效
-
-解决：
-> sqlplus / as sysdba  
-> SQL*Plus: Release 11.2.0.1.0 Production on 星期二 10月 17 15:42:58 2017  
-> Copyright (c) 1982, 2010, Oracle.  All rights reserved.  
-> 连接到:  
-> Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - Production  
-> With the Partitioning, OLAP, Data Mining and Real Application Testing options  
-> SQL> ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;  
-> 配置文件已更改  
-> SQL> alter user 用户名 dentified by 密码 account unlock;  
-> 用户已更改。
-
-再次测试登录即可
-
-**SqlPlus前台程序出现中文乱码**
-1. 查看数据库字符集  
-   在sqlplus中执行 `select userenv('language') from dual;`查看当前数据库的字符集为：`SIMPLIFIED CHINESE_CHINA.ZHS16GBK`。
-   我们只需要把客户端字符集和操作系统字符集都设置成这个就行了
-   在命令行中执行`SET NLS_LANG=SIMPLIFIED CHINESE_CHINA.ZHS16GBK`。
-   以上参数设置只是在当前会话生效
-2. 设置客户端字符集
-   在环境变量中查找一个名为`NLS_LANG`的环境变量，如果找不到，则新建一个，
-   再把变量值赋值为`SIMPLIFIED CHINESE_CHINA.ZHS16GBK`
-
-详情见：[http://blog.itpub.net/26839123/viewspace-722870/](http://blog.itpub.net/26839123/viewspace-722870/)  

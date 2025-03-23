@@ -1,5 +1,5 @@
 ---
-title: Vue实现谷歌地图集成
+title: 【案例】Vue实现谷歌地图集成
 tags:
   - Vue
   - Google Map

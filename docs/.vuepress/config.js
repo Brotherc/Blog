@@ -119,30 +119,23 @@ module.exports = {
                 path: '/blog/document/front/vue-googel_map',
                 collapsable: true,
                 children: [
-                    {title: "Vue实现谷歌地图集成", path: '/blog/document/front/vue-googel_map'}
+                    {title: "【案例】Vue实现谷歌地图集成", path: '/blog/document/front/vue-googel_map'}
                 ]
             }, {
                 title: '后端',
                 path: '/blog/document/backend/Java-bit-operation',
                 collapsable: true,
                 children: [
-                    {title: "搞懂位运算", path: '/blog/document/backend/Java-bit-operation'},
-                    {title: "Java高频代码备忘录", path: '/blog/document/backend/JavaCodeMemo'},
-                    {title: "Maven高级应用", path: '/blog/document/backend/Maven'}
+                    {title: "【知识】搞懂位运算", path: '/blog/document/backend/Java-bit-operation'},
+                    {title: "【工作】Java高频代码备忘录", path: '/blog/document/backend/JavaCodeMemo'},
+                    {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
             }, {
                 title: '数据库',
                 path: '/blog/document/database/Oracle',
                 collapsable: true,
                 children: [
-                    {title: "Oracle", path: '/blog/document/database/Oracle'},
-                    {title: "Oracle-monitorSql", path: '/blog/document/database/Oracle_monitor_sql'},
-                    {
-                        title: "MySQL-主从复制与读写分离",
-                        path: '/blog/document/database/mysql-Master-slave-replication-read-write-separation'
-                    },
-                    {title: "MySQL-性能优化", path: '/blog/document/database/mysql-performance-optimization'},
-                    {title: "MySQL-卸载", path: '/blog/document/database/mysql-uninstall'}
+                    {title: "【工作】Oracle开发代码速查", path: '/blog/document/database/Oracle'}
                 ]
             }, {
                 title: 'ORM',
