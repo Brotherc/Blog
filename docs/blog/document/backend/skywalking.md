@@ -35,7 +35,7 @@ java -jar
 
 <br>
 
-## 2.客户端Agent启动报错
+## 客户端Agent启动报错
 Skywalking服务端部署在192.168.1.100，将skywalking-agent.jar拷贝至客户端所在服务器的`/user/local/skywalking-agent.jar`，启动java客户端应用
 ```sh
 java -jar 

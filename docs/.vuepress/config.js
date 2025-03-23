@@ -133,6 +133,7 @@ module.exports = {
                     {title: "【问题】RSA私钥获取异常", path: '/blog/document/backend/encoderissue'},
                     {title: "【问题】Skywalking启动异常", path: '/blog/document/backend/skywalking'},
                     {title: "【手册】linux常用指令", path: '/blog/document/backend/linux-Commonly-used-instructions'},
+                    {title: "【手册】开发必备网站", path: '/blog/document/backend/resource-list'},
                     {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
             }, {
@@ -276,25 +277,19 @@ module.exports = {
                     {title: "atom", path: "/blog/document/editor/atom/atom-setting"}
                 ],
             }, {
-                title: '浏览器',
+                title: 'AI革命',
                 collapsable: true,
                 children: [
-                    {title: "Chrome", path: '/blog/document/browser/Chrome'}
+                    {title: "【资源】玩转AI", path: '/blog/document/ai/ai'}
                 ]
             }, {
-                title: 'AI',
-                collapsable: true,
-                children: [
-                    {title: "AI", path: '/blog/document/ai/ai'}
-                ]
-            }, {
-                title: '其它',
+                title: '开发者百宝箱',
                 collapsable: true,
                 path: '/blog/document/other/website',
                 children: [
-                    {title: "网站", path: '/blog/document/other/website'},
-                    {title: "world", path: '/blog/document/other/world'},
-                    {title: "excel", path: '/blog/document/other/excel'}
+                    {title: "【资源】宝藏网站", path: '/blog/document/other/website'},
+                    {title: "【资源】Chrome插件利器", path: '/blog/document/browser/Chrome'},
+                    {title: "【资源】技术学习", path: '/blog/document/other/study'}
                 ]
             }
         ]
