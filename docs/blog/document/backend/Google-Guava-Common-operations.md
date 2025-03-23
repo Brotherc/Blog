@@ -1,23 +1,13 @@
 ---
-title: Guava
+title: 【工作】Guava开发必备代码库
 tags:
+  - Java
   - Guava
 ---
 
-## 常用操作
-
-### Maps.newHashMap()
-
+## Joiner & Splitter
 ```java
-// 原生和使用Maps.newHashMap()唯一的区别就是简化代码，一个需要你手动加泛型，一个不需要你手动加
-// jdk 1.8 之后已经不用加泛型了
-Map<String, Object> result = new HashMap<String,Object>();
-Map<String, Object> result = Maps.newHashMap();
-```
-
-### Joiner 和 Splitter
-
-```java
+// url路径参数解析
 Map<String, String> join = Splitter.on("&").withKeyValueSeparator("=").split("id=1&name=lcs");
 String split = Joiner.on("&").withKeyValueSeparator("=").join(join);
 ```
@@ -32,29 +22,24 @@ Joiner.on("|").useForNull("no value").join(stringList);
 String result = Joiner.on("_").join("user_common_count", "name", new Object[]{"nick","adidas",10000})
 ```
 
-### MD5加密
+<br>
 
+## MD5
 ```java
 public class HashUtils {
-
 	private static final HashFunction FUNCTION = Hashing.md5();
-
 	private static final String SALT = "abcd";
 
 	public static String encryPassword(String password){
 	   HashCode hashCode =	FUNCTION.hashString(password + SALT, Charset.forName("UTF-8"));
 	   return hashCode.toString();
 	}
-
 }
 ```
-参考：   
-[https://www.tinymind.net.cn/articles/6e6def50718372](https://www.tinymind.net.cn/articles/6e6def50718372)  
-参考：  
-[https://ifeve.com/google-guava-hashing/](https://ifeve.com/google-guava-hashing/)  
 
-### Cache
+<br>
 
+## Cache
 ```java
 private final Cache<String, String> cache =
     CacheBuilder.newBuilder().maximumSize(100).expireAfterAccess(15, TimeUnit.MINUTES)
@@ -67,10 +52,9 @@ private final Cache<String, String> cache =
         }).build();
 ```
 
-### InputStream to String
+<br>
+
+### File
 ```java
-InputStream inputStream = new FileInputStream("d:/sample.txt");
-String text = CharStreams.toString(new InputStreamReader(inputStream, "UTF-8"));
+String text = CharStreams.toString(new InputStreamReader(new FileInputStream("d:/sample.txt"), "UTF-8"));
 ```
-参考：  
-[https://www.cnblogs.com/mistor/p/6127336.html](https://www.cnblogs.com/mistor/p/6127336.html)  

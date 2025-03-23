@@ -128,6 +128,7 @@ module.exports = {
                 children: [
                     {title: "【知识】搞懂位运算", path: '/blog/document/backend/Java-bit-operation'},
                     {title: "【工作】Java高频代码备忘录", path: '/blog/document/backend/JavaCodeMemo'},
+                    {title: "【工作】Guava开发必备代码库", path: '/blog/document/backend/Google-Guava-Common-operations'},
                     {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
             }, {
@@ -144,13 +145,6 @@ module.exports = {
                 children: [
                     {title: "Mybatis", path: '/blog/document/mybatis/Mybatis'},
                     {title: "MybatisPlus", path: '/blog/document/mybatis/Mybatis-plus'}
-                ]
-            }, {
-                title: 'Java常用类库',
-                path: '/blog/document/guava/Google-Guava-Common-operations',
-                collapsable: true,
-                children: [
-                    {title: "Guava", path: '/blog/document/guava/Google-Guava-Common-operations'}
                 ]
             }, {
                 title: '设计模式',
