@@ -142,21 +142,6 @@ module.exports = {
                     {title: "【工作】Oracle开发代码速查", path: '/blog/document/database/Oracle'}
                 ]
             }, {
-                title: '加解密',
-                path: '/blog/document/encryption&decryption/JAVA-encryption&decryption',
-                collapsable: true,
-                children: [
-                    {title: "Java-加解密实现", path: '/blog/document/encryption&decryption/JAVA-encryption&decryption'}
-                    /*'/blog/document/encryption&decryption/Encryption-type-and-its-related-algorithm'*/
-                ]
-            }, {
-                title: '日志',
-                collapsable: true,
-                path: '/blog/document/log/logback',
-                children: [
-                    {title: "Logback", path: '/blog/document/log/logback'}
-                ]
-            }, {
                 title: 'spring家族',
                 path: '/blog/document/spring/spring-Common-operations',
                 collapsable: true,
