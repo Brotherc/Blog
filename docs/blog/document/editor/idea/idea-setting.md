@@ -81,9 +81,7 @@ tags:
 <br>
 
 ## 常用快捷键
-```properties
-大小写切换: ctr+shift+u
-```
+> 大小写切换: ctr+shift+u
 
 <br>
 
@@ -102,8 +100,6 @@ Data Source-Advanced-VM Options-填上-Djava.net.preferIPv4Stack=true
 
 <br>
 
-**Gradle不兼容中文环境，控制台乱码**
-Help-Edit Custom VM Options
-```
--Dfile.encoding=UTF-8
-```
+**Gradle不兼容中文环境，控制台乱码**  
+Help-Edit Custom VM Options  
+> -Dfile.encoding=UTF-8
