@@ -9,6 +9,8 @@ tags:
 获取查找项的光标: ctrl + f，Alt + Enter
 ```
 
+<br>
+
 ## 支持Vue样式
 ### 1. 下载atom-vue
 [https://github.com/hedefalk/atom-vue](https://github.com/hedefalk/atom-vue)  

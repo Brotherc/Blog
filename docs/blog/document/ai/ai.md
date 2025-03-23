@@ -4,10 +4,10 @@ tags:
   - AI
 ---
 ## 工具
-- AI帮个忙
+- AI帮个忙  
   [https://aibang.run/](https://aibang.run/)  
   [https://www.hayo.com/](https://www.hayo.com/) 
-- AI聚合网站
+- AI聚合网站  
   [https://www.futurepedia.io](https://www.futurepedia.io)  
   [https://17yongai.com/](https://17yongai.com/)  
   [https://www.aiyjs.com/](https://www.aiyjs.com/)
@@ -58,7 +58,7 @@ tags:
   [https://yige.baidu.com/](https://yige.baidu.com/)  
 - 把素描变成一幅画  
   [https://scribblediffusion.com/](https://scribblediffusion.com/)  
-- AI绘画
+- AI绘画  
   [https://www.recraft.ai/](https://www.recraft.ai/)  
 
 <br>

@@ -269,7 +269,7 @@ module.exports = {
             //     ]
             // },
             {
-                title: "编辑器",
+                title: "开发编辑器",
                 path: '/blog/document/editor/idea/idea-setting',
                 collapsable: true, // 不折叠
                 children: [
