@@ -131,6 +131,7 @@ module.exports = {
                     {title: "【工作】Guava开发必备代码库", path: '/blog/document/backend/Google-Guava-Common-operations'},
                     {title: "【工作】Mybatis高频代码备忘录", path: '/blog/document/backend/Mybatis'},
                     {title: "【工作】策略模式在Spring中实现", path: '/blog/document/backend/Spring-strategy'},
+                    {title: "【问题】RSA私钥获取异常", path: '/blog/document/backend/encoderissue'},
                     {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
             }, {
