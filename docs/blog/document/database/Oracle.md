@@ -20,6 +20,7 @@ substr(string string, int a, int b);
 substr(string string, int a) ;
 ```
 
+<br>
 
 ## 序列
 **修改序列值**
@@ -33,6 +34,8 @@ SELECT 序列名.NEXTVAL FROM DUAL;
 DROP SEQUENCE 序列名;
 CREATE SEQUENCE 序列名 START WITH 1;
 ```
+
+<br>
 
 ## 分组
 **分组后统计各种条件的总数**
@@ -69,12 +72,15 @@ where xuhao = 1;
 OVER(PARTITION BY... ORDER BY...)
 ```
 
+<br>
+
 ## 数字
 **保留两位小数**
 ```sql
 select trim(to_char(12.3, '9999999990.99')) from dual
 ```
 
+<br>
 
 ## 日期时间
 **计算日期相隔天数**
@@ -87,6 +93,7 @@ SELECT TRUNC(SYSDATE) - TRUNC(SYSDATE) FROM DUAL
 SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS') FROM DUAL
 ```
 
+<br>
 
 ## PLSQL
 
@@ -218,16 +225,22 @@ begin
 end;
 ```
 
+<br>
+
 ## 工具
 **通过sql developer导出脚本**
 ![](./assets/oracle/1.png)  
 ![](./assets/oracle/2.png)
+
+<br>
 
 ## 运维
 **数据误删，获取最近1小时内的数据**
 ```sql
 select * from T_TABLE_NAME as of timestamp sysdate - interval '1' hour
 ```
+
+<br>
 
 ## 其它问题
 **ORA-28001:口令已经失效**
@@ -245,7 +258,7 @@ select * from T_TABLE_NAME as of timestamp sysdate - interval '1' hour
 > SQL> alter user 用户名 dentified by 密码 account unlock;  
 > 用户已更改。
 
-再次测试登录即可
+再次测试登录即可  
 
 **SqlPlus前台程序出现中文乱码**
 1. 查看数据库字符集  
