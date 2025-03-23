@@ -146,9 +146,8 @@ module.exports = {
                 path: '/blog/document/encryption&decryption/JAVA-encryption&decryption',
                 collapsable: true,
                 children: [
-                    {title: "Java-加解密实现", path: '/blog/document/encryption&decryption/JAVA-encryption&decryption'},
+                    {title: "Java-加解密实现", path: '/blog/document/encryption&decryption/JAVA-encryption&decryption'}
                     /*'/blog/document/encryption&decryption/Encryption-type-and-its-related-algorithm'*/
-                    {title: "问题", path: '/blog/document/encryption&decryption/issue'}
                 ]
             }, {
                 title: '日志',
