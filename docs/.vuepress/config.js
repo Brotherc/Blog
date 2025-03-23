@@ -132,6 +132,7 @@ module.exports = {
                     {title: "【工作】Mybatis高频代码备忘录", path: '/blog/document/backend/Mybatis'},
                     {title: "【工作】策略模式在Spring中实现", path: '/blog/document/backend/Spring-strategy'},
                     {title: "【问题】RSA私钥获取异常", path: '/blog/document/backend/encoderissue'},
+                    {title: "【手册】linux常用指令", path: '/blog/document/backend/linux-Commonly-used-instructions'},
                     {title: "【拓展】Maven高级应用", path: '/blog/document/backend/Maven'}
                 ]
             }, {
@@ -155,14 +156,6 @@ module.exports = {
                 path: '/blog/document/log/logback',
                 children: [
                     {title: "Logback", path: '/blog/document/log/logback'}
-                ]
-            }, {
-                title: '操作系统',
-                path: '/blog/document/linux/linux-Commonly-used-instructions',
-                collapsable: true,
-                children: [
-                    {title: "linux-常用指令", path: '/blog/document/linux/linux-Commonly-used-instructions'},
-                    {title: "centos7-知识点", path: '/blog/document/linux/centos7'}
                 ]
             }, {
                 title: 'spring',

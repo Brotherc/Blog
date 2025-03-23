@@ -1,5 +1,5 @@
 ---
-title: linux-常用指令
+title: 【手册】linux常用指令
 tags:
   - linux
 ---
@@ -11,13 +11,19 @@ tags:
 > ls 目录 &ensp;&emsp; &emsp; //查看指定目录下有什么文件  
 > ls -i &emsp;&emsp;&emsp;&emsp; //查看文件索引号码  
 
+<br>
+
 ## 进行目录切换
 > cd dirname &emsp;//进行目录切换    
 > cd .. &emsp;&emsp;&emsp;&emsp;&ensp;//想上级目录切换  
 > cd ~ 或 cd &emsp;&ensp;//直接切换到当前用户  
 
+<br>
+
 ## 查看完整的操作位置
 > pwd  
+
+<br>
 
 ## 用户切换
 > su -  或 su - root &emsp;//向root用户切换  
@@ -28,16 +34,24 @@ tags:
 （su和exit最好配合使用）  
 lcs--->root--->lcs--->root--->lcs  
 
+<br>
+
 ## 查看当前用户是谁
 > whoami  
+
+<br>
 
 ## 图形界面与命令界面切换
 root用户可以切换  
 > #init 3  
 > #init 5  
 
+<br>
+
 ## 查看一个指令对应的执行程序文件在哪
 > which 指令  
+
+<br>
 
 ## 目录相关操作
 1）创建目录 make directory  
@@ -85,6 +99,8 @@ mkdir dir/newdir &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;//不用-p参数
 > rm -r 目录  &emsp;&emsp;&emsp;&emsp;&emsp;//-r[recursive递归]递归方式删除目录  
 > rm -rf 文件/目录  &emsp;&emsp; //-r force 递归强制方式删除文件，force强制，不需要额外导入提示  
 
+<br>
+
 ## 文件操作
 1）查看文件内容  
 
@@ -115,6 +131,8 @@ mkdir dir/newdir &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;//不用-p参数
 
 （如果文件不存在会创建文件）  
 
+<br>
+
 ## 用户操作
 配置文件：/etc/passwd  
 1）创建用户 user add  
@@ -139,6 +157,8 @@ mkdir dir/newdir &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;//不用-p参数
 
 >passwd 用户名  
 
+<br>
+
 ## 组别操作
 配置文件：/etc/group  
 1）创建组 group add  
@@ -155,8 +175,12 @@ mkdir dir/newdir &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;//不用-p参数
 
 >#groupdel groupname //组下边如果有用户存在，就禁止删除  
 
+<br>
+
 ## 查看指令可设置的参数
 >man 指令  
+
+<br>
 
 ## 给文件设置权限
 1）字母相对方式设置权限  
@@ -194,13 +218,19 @@ chmod ABC filename //ABC分别代表主人、同组、其他组用户的数字�
 问：字母相对 和 数字绝对 方式权限设置取舍？  
 答：修改的权限相对“比较少”的时候使用“字母”方式，相反，权限变动“非常多”的时候就使用“数字”方式  
 
+<br>
+
 ## 在文件中查找内容
 grep 被搜索内容 文件  
 > grep hello passwd //在passwd文件中搜索hello内容，会把hello所在行的内容都打印到终端显示   
 > grep -o '关键字' filename | wc -l //统计关键字数量   
 
+<br>
+
 ## 计算文件占据磁盘空间大小
 > du -h 文件（目录）  
+
+<br>
 
 ## 文件查找
 find 查找目录 选项 选项值 选项 选项值 ...  
@@ -230,6 +260,8 @@ find 查找目录 选项 选项值 选项 选项值 ...
 > find ./ -size 14c &emsp;&emsp;//在当前目录查找大小等于14千字节的文件  
 > find / -size +50M  &emsp;//在系统全部目录里边查找大小大于50M的文件  
 
+<br>
+
 ## vim
 搜索：  
 > /+关键字 ，回车即可。此为从文档当前位置向下查找关键字，按n键查找关键字下一个位置，按N键查找关键字上一个位置  
@@ -244,11 +276,15 @@ find 查找目录 选项 选项值 选项 选项值 ...
 > 最后按下“Esc”键。  
 > 注：在按下esc键后，会稍等一会才会出现注释，不要着急~~时间很短的  
 
+<br>
+
 ## java程序启动
 - 不要使用 “nohup” 命令；使用 “nohup” 会记大量日志在 “nohup.out”，这个日志文件会一直累加，直到硬盘挤爆，这个文件一般不好找；
 - 如果非要加“nohup”，在最后加上“ >/dev/null 2>&1”，不记录 “nohup.out”日志；
 - 程序启动的时候，不需要进入到jar包目录再对jar包启动，使用绝对路径，方便其他人通过历史记录知道jar的位置；
 - 如“java -jar /home/ms/eureka/cloud-eureka-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &”；
+
+<br>
 
 ## 磁盘操作
 ```shell script
@@ -265,11 +301,11 @@ du -lhd 1
 ll -h /usr/local/nginx-1.16.0/logs/crm.access.log
 ```
 
+<br>
+
 ## wget
 发送post请求：--post-data设置请求body  
 携带query参数：url需加上双引号  
 ```shell
 wget --header="Authorization: XXX" --post-data='{}' "https://xxx.com/xxx?a=b&c=d"
 ```
-参考：  
-[http://www.manongjc.com/detail/25-cwpauuilypravwr.html](http://www.manongjc.com/detail/25-cwpauuilypravwr.html)  

@@ -14,9 +14,9 @@ PrivateKey getPrivateKey(String key) throws NoSuchAlgorithmException, InvalidKey
 }
 ```
 错误：
-> java.security.spec.InvalidKeySpecException: java.security.InvalidKeyException: IOException : algid parse error, not a sequence
->	at sun.security.rsa.RSAKeyFactory.engineGeneratePrivate(RSAKeyFactory.java:217)
->	at java.security.KeyFactory.generatePrivate(KeyFactory.java:372)
+> java.security.spec.InvalidKeySpecException: java.security.InvalidKeyException: IOException : algid parse error, not a sequence  
+>	at sun.security.rsa.RSAKeyFactory.engineGeneratePrivate(RSAKeyFactory.java:217)  
+>	at java.security.KeyFactory.generatePrivate(KeyFactory.java:372)  
 
 解决：  
 ```java
