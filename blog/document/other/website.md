@@ -19,6 +19,12 @@ tags:
   [https://tools.pdf24.org/](https://tools.pdf24.org/)  
 - IT工具箱  
   [https://it-tools.tech/](https://it-tools.tech/)
+- 数据库er图生成
+  [https://liambx.com/](https://liambx.com/)  
+- pdf/图片/写作/文件的免费工具
+  [https://tinywow.com/tools](https://tinywow.com/tools)
+- 各种东西的维修手册
+  [http://www.ifixit.com/](http://www.ifixit.com/)  
 
 <br>
 
@@ -33,6 +39,9 @@ tags:
   [https://qiuyin.us/](https://qiuyin.us/) 
 - linkhub  
   [https://linkhub.ink/](https://linkhub.ink/)
+- fer
+  [https://pnsrb.top/home?gad_source=5&gclid=EAIaIQobChMIiu3Iko2KjQMVKF4PAh1fuQyUEAEYASAAEgIRevD_BwE](https://pnsrb.top/home?gad_source=5&gclid=EAIaIQobChMIiu3Iko2KjQMVKF4PAh1fuQyUEAEYASAAEgIRevD_BwE)  
+
 
 <br>
 
@@ -46,4 +55,10 @@ tags:
 - ChatGPT Plugs购买  
   [https://nf.video/yinhe/web?sharedId=117320](https://nf.video/yinhe/web?sharedId=117320)
 - 各种账号邮箱购买  
-  [https://www.henduohao.com/](https://www.henduohao.com/) 
+  [https://www.henduohao.com/](https://www.henduohao.com/)
+- 蓝光资源
+  [https://www.seedhub.cc](https://www.seedhub.cc)  
+- 免费资源
+  [https://fmhy.net](https://fmhy.net)  
+- 各大社交平台视频下载器
+  [https://www.datatool.vip/zh](https://www.datatool.vip/zh)  

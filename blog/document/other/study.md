@@ -32,3 +32,14 @@ tags:
   [https://github.com/justjavac/free-programming-books-zh_CN](https://github.com/justjavac/free-programming-books-zh_CN)
 - 论坛  
   [https://linux.do/](https://linux.do/)  
+- github项目  
+  [https://hellogithub.com/](https://hellogithub.com/)  
+- 收费软件的免费替代
+  [https://www.opensourcealternative.to/](https://www.opensourcealternative.to/)  
+- docker学习
+  [https://yeasy.gitbook.io/docker_practice](https://yeasy.gitbook.io/docker_practice)  
+  [https://dockerdocs.xuanyuan.me/](https://dockerdocs.xuanyuan.me/)  
+- 镜像搜索
+  [https://docker.aityp.com/](https://docker.aityp.com/)  
+- github加速
+  [https://githubhosts.xuanyuan.me/](https://githubhosts.xuanyuan.me/)  

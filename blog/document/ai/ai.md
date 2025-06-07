@@ -12,6 +12,8 @@ tags:
   [https://www.futurepedia.io](https://www.futurepedia.io)  
   [https://17yongai.com/](https://17yongai.com/)  
   [https://www.aiyjs.com/](https://www.aiyjs.com/)
+- 通往AGI之路
+  [https://www.waytoagi.com/zh](https://www.waytoagi.com/zh)  
 
 <br>
 
@@ -61,6 +63,7 @@ tags:
   [https://scribblediffusion.com/](https://scribblediffusion.com/)  
 - AI绘画  
   [https://www.recraft.ai/](https://www.recraft.ai/)  
+  [https://www.imgex.ai/zh/playground](https://www.imgex.ai/zh/playground)  
 
 <br>
 

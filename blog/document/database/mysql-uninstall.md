@@ -34,3 +34,10 @@ HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/Eventlog/Application
 
 **5.删除系统变量**  
 选择电脑-属性-高级系统设置-环境变量-系统变量，删除Path变量中Mysql相关的配置，切记不是全部删除   
+
+## mac卸载8.0
+[https://www.cnblogs.com/qiuqiu2021/p/17650873.html](https://www.cnblogs.com/qiuqiu2021/p/17650873.html)  
+
+## mac安装8.0
+[https://cloud.tencent.com/developer/article/2079282](https://cloud.tencent.com/developer/article/2079282)  
+

@@ -8,6 +8,7 @@ tags:
 ```properties
 多个光标往下: ctrl + alt + 向下箭头
 获取查找项的光标: ctrl + f，Alt + Enter
+光标统一往右移动: ctrl + shift + 向右箭头
 ```
 
 <br>
