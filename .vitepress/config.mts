@@ -66,6 +66,7 @@ export default defineConfig({
           {text: "【工作】Nginx获取客户端ip端口", link: '/blog/document/business/nginx-orgin-ip-port'},
           {text: "【手册】linux常用指令", link: '/blog/document/backend/linux-Commonly-used-instructions'},
           {text: "【手册】开发必备网站", link: '/blog/document/backend/resource-list'},
+          {text: "【拓展】Maven中央仓库项目发布", link: '/blog/document/backend/Maven'},
           {text: "【工作】Maven高级应用", link: '/blog/document/backend/Maven'}
         ]
       },{
