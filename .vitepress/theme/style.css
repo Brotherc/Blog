@@ -6,3 +6,19 @@
 .medium-zoom-image {
     z-index: 9999 !important;
 }
+
+.VPContent.has-sidebar {
+    padding-right: 0 !important;
+}
+
+.VPDoc.has-aside .content-container {
+    max-width: 888px !important;
+}
+
+:root {
+    --vp-layout-max-width: 1740px;
+}
+
+:root {
+    --vp-sidebar-width: 350px;
+}
