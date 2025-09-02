@@ -288,7 +288,7 @@ find 查找目录 选项 选项值 选项 选项值 ...
 - 不要使用 “nohup” 命令；使用 “nohup” 会记大量日志在 “nohup.out”，这个日志文件会一直累加，直到硬盘挤爆，这个文件一般不好找；
 - 如果非要加“nohup”，在最后加上“ >/dev/null 2>&1”，不记录 “nohup.out”日志；
 - 程序启动的时候，不需要进入到jar包目录再对jar包启动，使用绝对路径，方便其他人通过历史记录知道jar的位置；
-- 如“java -jar /home/ms/eureka/cloud-eureka-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &”；
+- 如“nohup java -jar /home/ms/eureka/cloud-eureka-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &”；
 
 <br>
 
