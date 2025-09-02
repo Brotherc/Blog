@@ -136,7 +136,8 @@ export default defineConfig({
           {text: "【工作】Spring奇巧淫技", link: '/blog/document/spring/spring-Common-operations'},
           {text: "【工作】策略模式在Spring中实现", link: '/blog/document/spring/Spring-strategy'},
           {text: "【工作】RestTemplate实战", link: '/blog/document/spring/resttemplate'},
-          {text: "【工作】Feign", link: '/blog/document/spring/feign'}
+          {text: "【工作】Feign", link: '/blog/document/spring/feign'},
+          {text: "【实践】类路径下文件加载如何实现可配置", link: '/blog/document/spring/class-path-file-external-load'}
         ]
       },{
         text: '分布式',
