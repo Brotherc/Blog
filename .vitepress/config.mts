@@ -237,7 +237,7 @@ export default defineConfig({
       // ]}
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/CyrilFeng/Q-calculator' }
+      { icon: 'github', link: 'https://github.com/Brotherc' }
     ]
   }
 })
