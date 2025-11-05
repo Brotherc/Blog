@@ -14,7 +14,7 @@ tags:
 
 ## 工具
 - 在线JSON转Excel  
-  [https://wejson.cn/json2excel/](https://wejson.cn/json2excel/)  
+  [https://tableconvert.com/json-to-excel](https://tableconvert.com/json-to-excel)  
 - 在线pdf工具  
   [https://tools.pdf24.org/](https://tools.pdf24.org/)  
 - IT工具箱  
@@ -25,6 +25,25 @@ tags:
   [https://tinywow.com/tools](https://tinywow.com/tools)
 - 各种东西的维修手册
   [http://www.ifixit.com/](http://www.ifixit.com/)  
+
+<br>
+
+## 网盘
+- 毕方铺  
+  [https://www.bifangpu.com/](https://www.bifangpu.com/)  
+- 即刻盘  
+  [https://jikepan.xyz/](https://jikepan.xyz/)  
+- 灵异网盘  
+  [http://0eso.com/](http://0eso.com/)  
+- gaze  
+  [https://gaze.run/cloud-share](https://gaze.run/cloud-share)  
+- 原牛  
+  [https://mihoyonb.com/pan-search](https://mihoyonb.com/pan-search)  
+
+<br>
+
+## 远程工作  
+[https://job.careers](https://job.careers)  
 
 <br>
 
@@ -62,3 +81,5 @@ tags:
   [https://fmhy.net](https://fmhy.net)  
 - 各大社交平台视频下载器
   [https://www.datatool.vip/zh](https://www.datatool.vip/zh)  
+- openAI购买平台  
+  [https://eylink.cn/](https://eylink.cn/)  

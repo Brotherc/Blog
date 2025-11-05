@@ -81,3 +81,9 @@ tags:
   [https://veditor.xbeibeix.com/](https://veditor.xbeibeix.com/)  
 - 录音转文字  
   [https://www.voiceclub.cn/](https://www.voiceclub.cn/)  
+
+<br>
+
+## 图片
+- AI编辑图片  
+  [https://freeaiimage.net/zh/](https://freeaiimage.net/zh/)  
