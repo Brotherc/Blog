@@ -138,7 +138,8 @@ export default defineConfig({
           {text: "【工作】RestTemplate实战", link: '/blog/document/spring/resttemplate'},
           {text: "【工作】Feign", link: '/blog/document/spring/feign'},
           {text: "【实践】类路径下文件加载如何实现可配置", link: '/blog/document/spring/class-path-file-external-load'},
-          {text: "【实践】解决forward在SpringSecurityOAuth2中失效", link: '/blog/document/spring/spring-security-oauth-un-support-forward'}
+          {text: "【实践】解决forward在SpringSecurityOAuth2中失效", link: '/blog/document/spring/spring-security-oauth-un-support-forward'},
+          {text: "【实践】SpringSchedule实现动态配置", link: '/blog/document/spring/spring-schedule'}
         ]
       },{
         text: '分布式',
