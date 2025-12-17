@@ -127,7 +127,8 @@ export default defineConfig({
         text: '数据库',
         collapsed: false,
         items: [
-          {text: "【工作】Oracle开发代码速查", link: '/blog/document/database/Oracle'}
+          {text: "【工作】Oracle开发代码速查", link: '/blog/document/database/Oracle'},
+          {text: "【工作】openGauss-安装", link: '/blog/document/database/openGauss_install'}
         ]
       },{
         text: 'spring',

@@ -7,10 +7,12 @@ tags:
 # 【实践】SpringSchedule实现动态配置
 
 ## 背景
-在分布式环境下实现调度功能，我们一般会使用一些第三方的分布式定时调度任务平台或引擎，例如XXL-JOB、Elastic-Job、Quartz等。而在单体项目中，我们大多直接使用Spring框架提供的@Scheduled注解实现定时任务。但是@Scheduled注解的cron表达室只能硬编码，无法动态配置，存在局限性。这时我们需要改为使用`org.springframework.scheduling.annotation.SchedulingConfigurer`  
+在分布式环境下实现调度功能，我们一般会使用一些第三方的分布式定时调度任务平台或引擎，例如XXL-JOB、Elastic-Job、Quartz等。  
+而在单体项目中，我们大多直接使用Spring框架提供的@Scheduled注解实现定时任务。但是@Scheduled注解的用法只能硬编码，无法动态配置，存在局限性。  
+这时我们需要改为使用`org.springframework.scheduling.annotation.SchedulingConfigurer`  
 
 ## SchedulingConfigurer
-SchedulingConfigurer是@Scheduled 的全局配置入口 / 高级用法，允许我们定制@Scheduled的底层调度行为，可以自定义Spring定时任务使用的调度器（线程池、触发器、动态 cron 等）  
+SchedulingConfigurer是`@Scheduled`的全局配置入口/高级用法，允许我们定制`@Scheduled`的底层调度行为，可以自定义Spring定时任务使用的调度器（线程池、触发器、动态 cron 等）  
 
 ## 动态调度
 在使用@Scheduled时，我配置了项目启动60s后，每60s秒执行一次  
