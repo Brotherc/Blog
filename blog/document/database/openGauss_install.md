@@ -92,7 +92,7 @@ gs_initdb -D /home/omm/openGauss/data/single_node --nodename sgnode -U omm
 ```
 
 # 连接数据库
-进入到bin文件夹`/home/utyun/openGauss/bin/`，执行连接数据库命令
+进入到bin文件夹`/home/omm/openGauss/bin/`，执行连接数据库命令
 ```shell
 ./gsql -d postgres -p 5432 -U omm
 ```
