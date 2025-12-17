@@ -3,7 +3,8 @@ title: 【工作】openGauss-安装
 tags:
 - openGauss
 ---
-# 创建安装用户
+# 【工作】openGauss-安装
+## 创建安装用户
 openGauss禁止root安装，请提前准备一个linux用户如omm且授予全部权限，便于后续操作（注意后续的路径为omm账用户的，其他用户自行调整）  
 1、创建用户  
 ```shell
@@ -20,13 +21,13 @@ omm hard nofile 1000000
 ```
 4、重新登录生效  
 
-# 开放防火墙端口
+## 开放防火墙端口
 ```shell
 sudo firewall-cmd --add-port=5432/tcp --permanent
 sudo firewall-cmd --reload
 ```
 
-# 安装库
+## 安装库
 查看是否已安装libtool 动态加载库  
 ```shell
 sudo find / -name "libltdl.so*"
@@ -36,18 +37,18 @@ sudo find / -name "libltdl.so*"
 sudo yum install libtool-ltdl
 ```
 
-# 下载安装包
+## 下载安装包
 官网：https://opengauss.org/zh/download/?version=lts  
 ![download.png](assets/opengauss/download.png)  
 选择LTS长期维护版本openGauss 6.0.2(LTS)，下载安装包到路径/home/omm/openGauss/  
 
-# 解压安装包
+## 解压安装包
 输入以下命令解压，如果报错`tar (child): bzip2: Cannot exec: No such file or directory`需通过执行`yum install -y bzip2` 安装bzip2依赖包，安装完成后，再次运行解压命令  
 ```shell
 tar -jxf openGauss-Server-6.0.2-CentOS7-x86_64.tar.bz2
 ```
 
-# 安装
+## 安装
 进入到simpleInstall文件夹执行安装命令，your_actual_password替换为实际的密码  
 ```shell
 sh ./install.sh -w your_actual_password
@@ -91,7 +92,7 @@ chmod 700 /home/omm/openGauss/data/single_node
 gs_initdb -D /home/omm/openGauss/data/single_node --nodename sgnode -U omm
 ```
 
-# 连接数据库
+## 连接数据库
 进入到bin文件夹`/home/omm/openGauss/bin/`，执行连接数据库命令
 ```shell
 ./gsql -d postgres -p 5432 -U omm
@@ -99,17 +100,17 @@ gs_initdb -D /home/omm/openGauss/data/single_node --nodename sgnode -U omm
 ![gsql.png](assets/opengauss/gsql.png)  
 连接成功，本地连接默认不用密码  
 
-# 设置密码
+## 设置密码
 your_secure_password替换为实际密码
 ```shell
 ALTER ROLE omm PASSWORD 'your_secure_password';
 ```
 
-# 验证
+## 验证
 ![test.png](assets/opengauss/test.png)  
 ![test2.png](assets/opengauss/test2.png)  
 
-# 配置
+## 配置
 1. 修改postgresql配置文件，放开监听地址，允许远程访问  
 ```shell
 vi /home/omm/openGauss/data/single_node/postgresql.conf
@@ -124,13 +125,13 @@ vi /home/omm/openGauss/data/single_node/pg_hba.conf
 host    all             all             0.0.0.0/0             sha256
 ```
 
-# 创建数据库
+## 创建数据库
 连接数据库后执行创建isolator数据库命令
 ```sql
 CREATE DATABASE isolator DBCOMPATIBILITY 'B';
 ```
 
-# 创建用户
+## 创建用户
 创建用户
 ```sql
 CREATE USER isolator WITH PASSWORD 'Ut123456' CREATEDB;
@@ -153,7 +154,7 @@ GRANT ALL PRIVILEGES TO isolator;
 \q
 ```
 
-# 其他命令
+## 其他命令
 启动/重启数据库  
 ```shell
 ./gs_ctl restart -D /home/omm/openGauss/data/single_node/
@@ -165,7 +166,7 @@ GRANT ALL PRIVILEGES TO isolator;
 ```
 ![cmd_stop.png](assets/opengauss/cmd_stop.png)  
 
-# 其它  
+## 其它  
 mac安装数据库管理工具dbeaver连接openGauss数据库  
 https://blog.csdn.net/Katharsis_Tk/article/details/138305306  
 
