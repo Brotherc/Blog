@@ -194,6 +194,12 @@ export default defineConfig({
           {text: "【资源】技术学习", link: '/blog/document/other/study'}
         ]
       }, {
+        text: '求职',
+        collapsed: false,
+        items: [
+          {text: "求职集合", link: '/blog/document/job/job_website'}
+        ]
+      }, {
         text: '其它',
         collapsed: false,
         items: [

@@ -43,12 +43,7 @@ tags:
 <br>
 
 ## 财经
-[https://cn.investing.com/news](https://cn.investing.com/news)  
-
-<br>
-
-## 远程工作  
-[https://job.careers](https://job.careers)  
+[https://cn.investing.com/news](https://cn.investing.com/news)
 
 <br>
 
